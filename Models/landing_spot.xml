@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>landing_spot.ac</path>
+ <offsets>
+    <x-m> 0.0 </x-m>
+    <y-m> 0.0 </y-m>
+    <z-m> 0.0 </z-m>
+ </offsets>
+
+
+ 
+
+ <animation>
+	 <type>alpha-test</type>
+	 <object-name>spot_light1</object-name>
+	 <alpha-factor>0.002</alpha-factor>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>spot_light1</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>controls/lighting/nav-lights</property>
+				 <value>1.0</value>
+			 </equals>
+			 <equals>
+			   <property>gear/gear[0]/position-norm</property>
+			   <value>1.0</value>
+			 </equals>
+		 </and>
+	 </condition>
+</animation>
+
+
+ 
+
+ <animation>
+	 <type>alpha-test</type>
+	 <object-name>spot_light2</object-name>
+	 <alpha-factor>0.002</alpha-factor>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>spot_light2</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>controls/lighting/nav-lights</property>
+				 <value>1.0</value>
+			 </equals>
+			 <equals>
+			   <property>gear/gear[0]/position-norm</property>
+			   <value>1.0</value>
+			 </equals>
+		 </and>
+	 </condition>
+</animation>
+
+<!--<animation>
+ <type>dist-scale</type>
+ <object-name>spot_light2</object-name>
+ <interpolation>
+  <entry><ind>0</ind><dep>1</dep></entry>
+  <entry><ind>100</ind><dep>2</dep></entry>
+  <entry><ind>500</ind><dep>5</dep></entry>
+ </interpolation>
+ <min>1.0</min>
+ <max>5.0</max>
+ <center>
+  <x-m>0.0</x-m>
+  <y-m>0.230</y-m>
+  <z-m>-2.664</z-m>
+ </center>
+</animation>-->
+
+</PropertyList>

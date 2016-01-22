@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>poslightgreen.ac</path>
+ <offsets>
+    <x-m> 0.0 </x-m>
+    <y-m> 0.0 </y-m>
+    <z-m> 0.0 </z-m>
+ </offsets>
+
+<animation>
+	 <type>billboard</type>
+	 <object-name>right_poslight</object-name>
+	 <spherical type="bool">true</spherical>
+</animation>
+ 
+
+ <animation>
+	 <type>alpha-test</type>
+	 <object-name>right_poslight</object-name>
+	 <alpha-factor>0.001</alpha-factor>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>right_poslight</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>controls/flight/wing-sweep</property>
+				 <value>1.0</value>
+			 </equals>
+			 <equals>
+				 <property>controls/lighting/nav-lights</property>
+				 <value>1.0</value>
+			 </equals>
+		 </and>
+	 </condition>
+  </animation>
+
+</PropertyList>

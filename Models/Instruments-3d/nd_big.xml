@@ -1,0 +1,7991 @@
+<!--
+Syd Adams, Josh Wilson
+787 ND 
+hacked by maggse
+-->
+
+<PropertyList>
+
+ <path>nd_b1_radar_big.ac</path>
+
+<animation>
+    <name>Alpha Sort</name>
+    <object-name>Radarscreen</object-name>
+    <object-name>NDhdg</object-name>
+    <object-name>mfdhdg</object-name>
+    <object-name>NDscreen</object-name>
+</animation>
+
+   <animation>
+   <type>texrotate</type>
+   <object-name>NDhdg</object-name>
+   <property>orientation/heading-magnetic-deg</property>
+   <center>
+     <x>0.5</x>
+     <y>0.5</y>
+     <z>0.0</z>
+   </center>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>-1</z>
+   </axis>
+ </animation>
+ 
+
+<animation>
+   <type>rotate</type>
+   <object-name>mfdhdg</object-name>
+   <property>autopilot/internal/fdm-heading-bug-error-deg</property>
+   <interpolation>
+     <entry>
+       <ind> -180.0</ind>
+       <dep>-47.0</dep>
+     </entry>
+     <entry>
+       <ind>-47.0</ind>
+       <dep>-47.0</dep>
+     </entry>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind>47.0</ind>
+       <dep>47.0</dep>
+     </entry>
+     <entry>
+       <ind>180.0</ind>
+       <dep>47.0</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x>-1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0.002</x-m>
+     <y-m>-0.002</y-m>
+     <z-m>-0.040</z-m>
+   </center>
+ </animation>
+
+<!--
+  <animation>
+   <type>textranslate</type>
+   <object-name>alttext</object-name>
+   <property>/autopilot/settings/target-altitude-ft</property>
+   <factor>0.00001</factor>
+   <step>10000</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>alttext.001</object-name>
+   <property>/autopilot/settings/target-altitude-ft</property>
+   <factor>0.0001</factor>
+   <step>1000</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+ <animation>
+   <type>textranslate</type>
+   <object-name>alttext.002</object-name>
+   <property>/autopilot/settings/target-altitude-ft</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+
+
+-->
+ 
+ <animation>
+   <type>textranslate</type>
+   <object-name>hdgtext</object-name>
+   <property>orientation/heading-magnetic-deg</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>hdgtext.001</object-name>
+   <property>orientation/heading-magnetic-deg</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>hdgtext.002</object-name>
+   <property>orientation/heading-magnetic-deg</property>
+   <factor>0.1</factor>
+   <step>1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>slip</object-name>
+	<property>orientation/side-slip-deg[0]</property>
+	<axis> 
+	<x>-1</x> <!-- inverted after a change in side-slip sign (bug #901) -->
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<!--<animation>
+   <type>select</type>
+<object-name>rng.001</object-name>
+<object-name>rng.002</object-name>
+<object-name>rng.003</object-name>
+<object-name>wxr.annun</object-name>
+<condition>
+<equals>
+<property>/instrumentation/wxradar/switch</property>
+<value>on</value>
+</equals>
+</condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>rng.001</object-name>
+   <property>/instrumentation/wxradar/range</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>rng.002</object-name>
+   <property>/instrumentation/wxradar/range</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+   <animation>
+   <type>textranslate</type>
+   <object-name>rng.003</object-name>
+   <property>/instrumentation/wxradar/range</property>
+   <factor>0.1</factor>
+   <step>1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>-->
+ 
+ <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrradar range adjustments -->
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>btn_rrng20</object-name>
+	 <condition>
+
+			 <equals>
+				 <property>instrumentation/radar/range[0]</property>
+				 <value>20</value>
+			 </equals>
+
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>btn_rrng40</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>instrumentation/radar/range[0]</property>
+				 <value>40</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>btn_rrng80</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>instrumentation/radar/range[0]</property>
+				 <value>80</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>btn_rrng160</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>instrumentation/radar/range[0]</property>
+				 <value>160</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>btn_rrng320</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>instrumentation/radar/range[0]</property>
+				 <value>320</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>btn_rrngu</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/radar-range</property>
+			 <step>0.25</step>
+			 <min>0.0</min>
+			 <max>1.00</max>
+		 </binding>
+		 <binding>
+			 <command>nasal</command>
+			 <script>b1b.radar_range()</script>
+		 </binding>
+	 </action>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>btn_rrngd</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/radar-range</property>
+			 <step>-0.25</step>
+			 <min>0.0</min>
+			 <max>1.00</max>
+		 </binding>
+		 <binding>
+			 <command>nasal</command>
+			 <script>b1b.radar_range()</script>
+		 </binding>
+	 </action>
+ </animation>
+
+ 
+ <!-- wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwaypoints -->
+
+<animation>
+<type>select</type>
+<object-name>waypoint1a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<less-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>10</value>
+</less-than>
+<greater-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>0</value>
+</greater-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1a</object-name>
+	<property>autopilot/settings/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>waypoint1a</object-name>
+	<property>autopilot/route-manager/wp/dist[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>waypoint1b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<less-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>20</value>
+</less-than>
+<greater-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>0</value>
+</greater-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1b</object-name>
+	<property>autopilot/settings/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>waypoint1b</object-name>
+	<property>autopilot/route-manager/wp/dist[0]</property>
+<factor>0.0040</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>waypoint1c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<less-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>40</value>
+</less-than>
+<greater-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>0</value>
+</greater-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1c</object-name>
+	<property>autopilot/settings/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>waypoint1c</object-name>
+	<property>autopilot/route-manager/wp/dist[0]</property>
+<factor>0.0020</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>waypoint1d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<less-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>80</value>
+</less-than>
+<greater-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>0</value>
+</greater-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1d</object-name>
+	<property>autopilot/settings/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>waypoint1d</object-name>
+	<property>autopilot/route-manager/wp/dist[0]</property>
+<factor>0.0010</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>waypoint1e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<less-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>160</value>
+</less-than>
+<greater-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>0</value>
+</greater-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1e</object-name>
+	<property>autopilot/settings/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>waypoint1e</object-name>
+	<property>autopilot/route-manager/wp/dist[0]</property>
+<factor>0.0005</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>waypoint1f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<less-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>320</value>
+</less-than>
+<greater-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>0</value>
+</greater-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1f</object-name>
+	<property>autopilot/settings/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>waypoint1f</object-name>
+	<property>autopilot/route-manager/wp/dist[0]</property>
+<factor>0.00025</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>waypoint1g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<less-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>640</value>
+</less-than>
+<greater-than>
+<property>autopilot/route-manager/wp/dist[0]</property>
+<value>0</value>
+</greater-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1g</object-name>
+	<property>autopilot/settings/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>waypoint1g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>waypoint1g</object-name>
+	<property>autopilot/route-manager/wp/dist[0]</property>
+<factor>0.00018125</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<!-- nnnnnnnnnnnnnnnnnnnnnnnnnnnnavigation block -->
+
+<animation>
+<type>select</type>
+<object-name>nav1a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<equals>
+<property>instrumentation/nav/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav/nav-distance[0]</property>
+<value>25000</value>
+</less-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1a</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav1a</object-name>
+	<property>instrumentation/nav/nav-distance[0]</property>
+<factor>0.0000043</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1a</object-name>
+	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1a</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav2a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<equals>
+<property>instrumentation/nav[1]/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav[1]/nav-distance[0]</property>
+<value>25000</value>
+</less-than>
+
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2a</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav2a</object-name>
+	<property>instrumentation/nav[1]/nav-distance[0]</property>
+<factor>0.0000043</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2a</object-name>
+	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2a</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav1b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<equals>
+<property>instrumentation/nav/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav/nav-distance[0]</property>
+<value>50000</value>
+</less-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1b</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav1b</object-name>
+	<property>instrumentation/nav/nav-distance[0]</property>
+<factor>0.00000215</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1b</object-name>
+	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1b</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav2b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<equals>
+<property>instrumentation/nav[1]/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav[1]/nav-distance[0]</property>
+<value>50000</value>
+</less-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2b</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav2b</object-name>
+	<property>instrumentation/nav[1]/nav-distance[0]</property>
+<factor>0.00000215</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2b</object-name>
+	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2b</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav1c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<equals>
+<property>instrumentation/nav/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav/nav-distance[0]</property>
+<value>100000</value>
+</less-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1c</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav1c</object-name>
+	<property>instrumentation/nav/nav-distance[0]</property>
+<factor>0.000001075</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1c</object-name>
+	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1c</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav2c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<equals>
+<property>instrumentation/nav[1]/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav[1]/nav-distance[0]</property>
+<value>100000</value>
+</less-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2c</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav2c</object-name>
+	<property>instrumentation/nav[1]/nav-distance[0]</property>
+<factor>0.000001075</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2c</object-name>
+	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2c</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav1d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<equals>
+<property>instrumentation/nav/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav/nav-distance[0]</property>
+<value>200000</value>
+</less-than>
+
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1d</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav1d</object-name>
+	<property>instrumentation/nav/nav-distance[0]</property>
+<factor>0.0000005375</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1d</object-name>
+	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1d</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav2d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<equals>
+<property>instrumentation/nav[1]/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav[1]/nav-distance[0]</property>
+<value>200000</value>
+</less-than>
+
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2d</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav2d</object-name>
+	<property>instrumentation/nav[1]/nav-distance[0]</property>
+<factor>0.0000005375</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2d</object-name>
+	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2d</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav1e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<equals>
+<property>instrumentation/nav/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav/nav-distance[0]</property>
+<value>400000</value>
+</less-than>
+
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1e</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav1e</object-name>
+	<property>instrumentation/nav/nav-distance[0]</property>
+<factor>0.000000268</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1e</object-name>
+	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1e</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav2e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<equals>
+<property>instrumentation/nav[1]/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav[1]/nav-distance[0]</property>
+<value>400000</value>
+</less-than>
+
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2e</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav2e</object-name>
+	<property>instrumentation/nav[1]/nav-distance[0]</property>
+<factor>0.000000268</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2e</object-name>
+	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2e</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav1f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<equals>
+<property>instrumentation/nav/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav/nav-distance[0]</property>
+<value>800000</value>
+</less-than>
+
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1f</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav1f</object-name>
+	<property>instrumentation/nav/nav-distance[0]</property>
+<factor>0.000000134</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1f</object-name>
+	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1f</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav2f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<equals>
+<property>instrumentation/nav[1]/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav[1]/nav-distance[0]</property>
+<value>800000</value>
+</less-than>
+
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2f</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav2f</object-name>
+	<property>instrumentation/nav[1]/nav-distance[0]</property>
+<factor>0.000000134</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2f</object-name>
+	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2f</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav1g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<equals>
+<property>instrumentation/nav/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav/nav-distance[0]</property>
+<value>1600000</value>
+</less-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1g</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav1g</object-name>
+	<property>instrumentation/nav/nav-distance[0]</property>
+<factor>0.000000098</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1g</object-name>
+	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav1g</object-name>
+	<property>instrumentation/nav/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nav2g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<equals>
+<property>instrumentation/nav[1]/in-range</property>
+<value>true</value>
+</equals>
+<less-than>
+<property>instrumentation/nav[1]/nav-distance[0]</property>
+<value>1600000</value>
+</less-than>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2g</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>nav2g</object-name>
+	<property>instrumentation/nav[1]/nav-distance[0]</property>
+<factor>0.000000098</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2g</object-name>
+	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>nav2g</object-name>
+	<property>instrumentation/nav[1]/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadf -->
+
+<animation>
+<type>select</type>
+<object-name>adf</object-name>
+<condition>
+<equals>
+<property>instrumentation/adf/in-range</property>
+<value>true</value>
+</equals>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>adf</object-name>
+	<property>instrumentation/adf/indicated-bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<!-- tacan -->
+
+<animation>
+	<type>select</type>
+	<object-name>tacan</object-name>
+	<condition>
+		<equals>
+			<property>instrumentation/tacan/in-range</property>
+			<value>true</value>
+		</equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>tacan</object-name>
+	<property>orientation/heading-deg</property>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+  </animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacan</object-name>
+	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>tacan_sign</object-name>
+	<object-name>tacantext</object-name>
+	<object-name>tacantext.001</object-name>
+	<object-name>tacantext.002</object-name>
+	<condition>
+			<equals>
+				<property>instrumentation/tacan/in-range</property>
+				<value>1</value>
+			</equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>tacantext</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.001</factor>
+	<step>100</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>tacantext.001</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.01</factor>
+	<step>10</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>tacantext.002</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.1</factor>
+	<step>1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+ </animation>
+
+ <animation>
+	 <type>select</type>
+	 <object-name>tacanpoint1a</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>instrumentation/radar/range[0]</property>
+				 <value>10</value>
+			 </equals>
+			 <equals>
+				 <property>instrumentation/tacan/in-range</property>
+				 <value>1</value>
+			 </equals>
+		 </and>
+	 </condition>
+</animation>
+ 
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1a</object-name>
+	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>tacanpoint1a</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.0080</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>tacanpoint1b</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/radar/range[0]</property>
+				<value>20</value>
+			</equals>
+			<equals>
+				<property>instrumentation/tacan/in-range</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1b</object-name>
+	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>tacanpoint1b</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.0040</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>tacanpoint1c</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/radar/range[0]</property>
+				<value>40</value>
+			</equals>
+			<equals>
+				<property>instrumentation/tacan/in-range</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1c</object-name>
+	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>tacanpoint1c</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.0020</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>tacanpoint1d</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/radar/range[0]</property>
+				<value>80</value>
+			</equals>
+			<equals>
+				<property>instrumentation/tacan/in-range</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1d</object-name>
+	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>tacanpoint1d</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.0010</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>tacanpoint1e</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/radar/range[0]</property>
+				<value>160</value>
+			</equals>
+			<equals>
+				<property>instrumentation/tacan/in-range</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1e</object-name>
+	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>tacanpoint1e</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.0005</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>tacanpoint1f</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/radar/range[0]</property>
+				<value>320</value>
+			</equals>
+			<equals>
+				<property>instrumentation/tacan/in-range</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1f</object-name>
+	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>tacanpoint1f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>tacanpoint1f</object-name>
+	<property>instrumentation/tacan/indicated-distance-nm</property>
+	<factor>0.00025</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>adf2</object-name>
+<condition>
+<equals>
+<property>instrumentation/adf/in-range</property>
+<value>true</value>
+</equals>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>adf2</object-name>
+	<property>instrumentation/adf/rotation-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>adf2</object-name>
+	<property>orientation/heading-magnetic-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<!-- AI RADAR -->
+<!-- AI 1-->
+<animation>
+<type>select</type>
+<object-name>AI1a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[0]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1a</object-name>
+	<property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI1a</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1a</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI2a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[1]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2a</object-name>
+	<property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI2a</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2a</object-name>
+	<property>ai/models/aircraft[1]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI3a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[2]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3a</object-name>
+	<property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI3a</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3a</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI4a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[3]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4a</object-name>
+	<property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4a</object-name>
+	<property>orientation/heading-deg[3]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI4a</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4a</object-name>
+	<property>ai/models/aircraft[3]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI5a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[4]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5a</object-name>
+	<property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI5a</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5a</object-name>
+	<property>ai/models/aircraft[4]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI6a</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>10</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[5]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6a</object-name>
+	<property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI6a</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6a</object-name>
+	<property>ai/models/aircraft[5]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI1b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[0]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1b</object-name>
+	<property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI1b</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.0040</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1b</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI2b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[1]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2b</object-name>
+	<property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI2b</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.0040</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2b</object-name>
+	<property>ai/models/aircraft[1]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI3b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[2]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3b</object-name>
+	<property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI3b</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.0040</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3b</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI4b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[3]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4b</object-name>
+	<property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4b</object-name>
+	<property>orientation/heading-deg[3]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI4b</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.0040</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4b</object-name>
+	<property>ai/models/aircraft[3]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI5b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[4]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5b</object-name>
+	<property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI5b</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.0040</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5b</object-name>
+	<property>ai/models/aircraft[4]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI6b</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>20</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[5]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6b</object-name>
+	<property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI6b</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.0040</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6b</object-name>
+	<property>ai/models/aircraft[5]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6b</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI1c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[0]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1c</object-name>
+	<property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI1c</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.0020</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1c</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI2c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[1]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2c</object-name>
+	<property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI2c</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.0020</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2c</object-name>
+	<property>ai/models/aircraft[1]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI3c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[2]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3c</object-name>
+	<property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI3c</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.0020</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3c</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI4c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[3]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4c</object-name>
+	<property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4c</object-name>
+	<property>orientation/heading-deg[3]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI4c</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.0020</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4c</object-name>
+	<property>ai/models/aircraft[3]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI5c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[4]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5c</object-name>
+	<property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI5c</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.0020</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5c</object-name>
+	<property>ai/models/aircraft[4]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI6c</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>40</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[5]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6c</object-name>
+	<property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI6c</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.0020</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6c</object-name>
+	<property>ai/models/aircraft[5]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6c</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI1d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[0]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1d</object-name>
+	<property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI1d</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.0010</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1d</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI2d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[1]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2d</object-name>
+	<property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI2d</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.0010</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2d</object-name>
+	<property>ai/models/aircraft[1]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI3d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[2]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3d</object-name>
+	<property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI3d</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.0010</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3d</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI4d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[3]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4d</object-name>
+	<property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4d</object-name>
+	<property>orientation/heading-deg[3]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI4d</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.0010</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4d</object-name>
+	<property>ai/models/aircraft[3]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI5d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[4]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5d</object-name>
+	<property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI5d</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.0010</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5d</object-name>
+	<property>ai/models/aircraft[4]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI6d</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>80</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[5]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6d</object-name>
+	<property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI6d</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.0010</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6d</object-name>
+	<property>ai/models/aircraft[5]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6d</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI1e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[0]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1e</object-name>
+	<property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI1e</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.0005</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1e</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI2e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[1]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2e</object-name>
+	<property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI2e</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.0005</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2e</object-name>
+	<property>ai/models/aircraft[1]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI3e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[2]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3e</object-name>
+	<property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI3e</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.0005</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3e</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI4e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[3]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4e</object-name>
+	<property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4e</object-name>
+	<property>orientation/heading-deg[3]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI4e</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.0005</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4e</object-name>
+	<property>ai/models/aircraft[3]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI5e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[4]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5e</object-name>
+	<property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI5e</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.0005</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5e</object-name>
+	<property>ai/models/aircraft[4]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI6e</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>160</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[5]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6e</object-name>
+	<property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI6e</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.0005</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6e</object-name>
+	<property>ai/models/aircraft[5]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6e</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI1f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[0]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1f</object-name>
+	<property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI1f</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.00025</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1f</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI2f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[1]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2f</object-name>
+	<property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI2f</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.00025</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2f</object-name>
+	<property>ai/models/aircraft[1]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI3f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[2]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3f</object-name>
+	<property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI3f</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.00025</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3f</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI4f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[3]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4f</object-name>
+	<property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4f</object-name>
+	<property>orientation/heading-deg[3]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI4f</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.00025</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4f</object-name>
+	<property>ai/models/aircraft[3]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI5f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[4]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5f</object-name>
+	<property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI5f</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.00025</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5f</object-name>
+	<property>ai/models/aircraft[4]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI6f</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>320</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[5]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6f</object-name>
+	<property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI6f</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.00025</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6f</object-name>
+	<property>ai/models/aircraft[5]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6f</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI1g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[0]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1g</object-name>
+	<property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI1g</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.00018125</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1g</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI1g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI2g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[1]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2g</object-name>
+	<property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI2g</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.00018125</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2g</object-name>
+	<property>ai/models/aircraft[1]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI2g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI3g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[2]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3g</object-name>
+	<property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI3g</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.00018125</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3g</object-name>
+	<property>ai/models/aircraft[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI3g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI4g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[3]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4g</object-name>
+	<property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4g</object-name>
+	<property>orientation/heading-deg[3]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI4g</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.00018125</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4g</object-name>
+	<property>ai/models/aircraft[3]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI4g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI5g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[4]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5g</object-name>
+	<property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI5g</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.00018125</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5g</object-name>
+	<property>ai/models/aircraft[4]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI5g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>AI6g</object-name>
+<condition>
+<and>
+<equals>
+<property>instrumentation/radar/range[0]</property>
+<value>640</value>
+</equals>
+<equals>
+<property>ai/models/aircraft[5]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6g</object-name>
+	<property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>AI6g</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.00018125</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6g</object-name>
+	<property>ai/models/aircraft[5]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>AI6g</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<!--######### begin of multiplayer -->
+
+<animation>
+<type>select</type>
+<object-name>MP1a</object-name>
+<condition>
+<and>
+
+<equals>
+<property>ai/models/multiplayer[0]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP1a</object-name>
+	<property>ai/models/multiplayer[0]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP1a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>MP1a</object-name>
+	<property>ai/models/multiplayer[0]/radar/draw-range-nm[0]</property>
+<factor>1</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP1a</object-name>
+	<property>ai/models/multiplayer[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP1a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP1a</object-name>
+	<property>ai/models/multiplayer[0]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>MP2a</object-name>
+<condition>
+<and>
+
+<equals>
+<property>ai/models/multiplayer[1]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP2a</object-name>
+	<property>ai/models/multiplayer[1]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP2a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>MP2a</object-name>
+	<property>ai/models/multiplayer[1]/radar/draw-range-nm[0]</property>
+<factor>1</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP2a</object-name>
+	<property>ai/models/multiplayer[1]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP2a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP2a</object-name>
+	<property>ai/models/multiplayer[1]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+
+<animation>
+<type>select</type>
+<object-name>MP3a</object-name>
+<condition>
+<and>
+
+<equals>
+<property>ai/models/multiplayer[2]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP3a</object-name>
+	<property>ai/models/multiplayer[2]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP3a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>MP3a</object-name>
+	<property>ai/models/multiplayer[2]/radar/draw-range-nm[0]</property>
+<factor>1</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP3a</object-name>
+	<property>ai/models/multiplayer[0]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP3a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP3a</object-name>
+	<property>ai/models/multiplayer[2]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>MP4a</object-name>
+<condition>
+<and>
+
+<equals>
+<property>ai/models/multiplayer[3]/radar/in-range</property>
+<value>true</value>
+</equals>
+</and>
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP4a</object-name>
+	<property>ai/models/multiplayer[3]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP4a</object-name>
+	<property>orientation/heading-deg[3]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>MP4a</object-name>
+	<property>ai/models/multiplayer[3]/radar/draw-range-nm[0]</property>
+<factor>1</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP4a</object-name>
+	<property>ai/models/multiplayer[3]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP4a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP4a</object-name>
+	<property>ai/models/multiplayer[3]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+
+<animation>
+<type>select</type>
+<object-name>MP5a</object-name>
+<condition>
+
+
+<equals>
+<property>ai/models/multiplayer[4]/radar/in-range</property>
+<value>true</value>
+</equals>
+
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP5a</object-name>
+	<property>ai/models/multiplayer[4]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP5a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>MP5a</object-name>
+	<property>ai/models/multiplayer[4]/radar/draw-range-nm[0]</property>
+<factor>1</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP5a</object-name>
+	<property>ai/models/multiplayer[4]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP5a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP5a</object-name>
+	<property>ai/models/multiplayer[4]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>MP6a</object-name>
+<condition>
+
+
+<equals>
+<property>ai/models/multiplayer[5]/radar/in-range</property>
+<value>true</value>
+</equals>
+
+</condition>
+ </animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP6a</object-name>
+	<property>ai/models/multiplayer[5]/radar/bearing-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP6a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>MP6a</object-name>
+	<property>ai/models/multiplayer[5]/radar/draw-range-nm[0]</property>
+<factor>1</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP6a</object-name>
+	<property>ai/models/multiplayer[5]/orientation/true-heading-deg[0]</property>
+	<axis> 
+	<x>-1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+ <animation> 
+	<type>rotate</type>
+	<object-name>MP6a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+	<x>1</x>
+	<y>0</y>
+	<z>0</z>
+	</axis>
+	<center>
+	 <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>-0.047</z-m>
+   </center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP6a</object-name>
+	<property>ai/models/multiplayer[5]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>MP7a</object-name>
+	<condition>
+		
+		
+		<equals>
+			<property>ai/models/multiplayer[6]/radar/in-range</property>
+			<value>true</value>
+		</equals>
+		
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP7a</object-name>
+	<property>ai/models/multiplayer[6]/radar/bearing-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP7a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>MP7a</object-name>
+	<property>ai/models/multiplayer[6]/radar/draw-range-nm[0]</property>
+	<factor>1</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP7a</object-name>
+	<property>ai/models/multiplayer[6]/orientation/true-heading-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP7a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP7a</object-name>
+	<property>ai/models/multiplayer[6]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>MP8a</object-name>
+	<condition>
+		
+		
+		<equals>
+			<property>ai/models/multiplayer[7]/radar/in-range</property>
+			<value>true</value>
+		</equals>
+		
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP8a</object-name>
+	<property>ai/models/multiplayer[7]/radar/bearing-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP8a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>MP8a</object-name>
+	<property>ai/models/multiplayer[7]/radar/draw-range-nm[0]</property>
+	<factor>1</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP8a</object-name>
+	<property>ai/models/multiplayer[7]/orientation/true-heading-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP8a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP8a</object-name>
+	<property>ai/models/multiplayer[7]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>MP9a</object-name>
+	<condition>
+		
+		
+		<equals>
+			<property>ai/models/multiplayer[8]/radar/in-range</property>
+			<value>true</value>
+		</equals>
+		
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP9a</object-name>
+	<property>ai/models/multiplayer[8]/radar/bearing-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP9a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>MP9a</object-name>
+	<property>ai/models/multiplayer[8]/radar/draw-range-nm[0]</property>
+	<factor>1</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP9a</object-name>
+	<property>ai/models/multiplayer[8]/orientation/true-heading-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP9a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP9a</object-name>
+	<property>ai/models/multiplayer[8]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>MP10a</object-name>
+	<condition>
+		
+		
+		<equals>
+			<property>ai/models/multiplayer[9]/radar/in-range</property>
+			<value>true</value>
+		</equals>
+		
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP10a</object-name>
+	<property>ai/models/multiplayer[9]/radar/bearing-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP10a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>MP10a</object-name>
+	<property>ai/models/multiplayer[9]/radar/draw-range-nm[0]</property>
+	<factor>1</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP10a</object-name>
+	<property>ai/models/multiplayer[9]/orientation/true-heading-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP10a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP10a</object-name>
+	<property>ai/models/multiplayer[9]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>MP11a</object-name>
+	<condition>
+		
+		
+		<equals>
+			<property>ai/models/multiplayer[10]/radar/in-range</property>
+			<value>true</value>
+		</equals>
+		
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP11a</object-name>
+	<property>ai/models/multiplayer[10]/radar/bearing-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP11a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>MP11a</object-name>
+	<property>ai/models/multiplayer[10]/radar/draw-range-nm[0]</property>
+	<factor>1</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP11a</object-name>
+	<property>ai/models/multiplayer[10]/orientation/true-heading-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP11a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP11a</object-name>
+	<property>ai/models/multiplayer[10]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>MP12a</object-name>
+	<condition>
+		
+		
+		<equals>
+			<property>ai/models/multiplayer[11]/radar/in-range</property>
+			<value>true</value>
+		</equals>
+		
+	</condition>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP12a</object-name>
+	<property>ai/models/multiplayer[11]/radar/bearing-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP12a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>translate</type>
+	<object-name>MP12a</object-name>
+	<property>ai/models/multiplayer[11]/radar/draw-range-nm[0]</property>
+	<factor>1</factor>
+	<axis> 
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP12a</object-name>
+	<property>ai/models/multiplayer[11]/orientation/true-heading-deg[0]</property>
+	<axis> 
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>rotate</type>
+	<object-name>MP12a</object-name>
+	<property>orientation/heading-deg[0]</property>
+	<axis> 
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.047</z-m>
+	</center>
+</animation>
+
+<animation> 
+	<type>textranslate</type>
+	<object-name>MP12a</object-name>
+	<property>ai/models/multiplayer[11]/position/rel-altitude-ft</property>
+	<interpolation>
+		<entry>
+			<ind>-3000.0</ind>
+			<dep>0.07</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.00</dep>
+		</entry>
+		<entry>
+			<ind>3000.0</ind>
+			<dep>-0.07</dep>
+		</entry>
+	</interpolation>
+	<axis> 
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+
+
+
+</PropertyList>

@@ -1,0 +1,63 @@
+<PropertyList>
+
+ <name>distance_to_tanker</name>
+ <modal>false</modal>
+ <layout>vbox</layout>
+ 
+ <text>
+    <label>Distance to Tanker</label>
+ </text>
+
+ <hrule/>
+ 
+  <!--<nasal>
+    <open>
+	#nasal file is in Aircraft/Generic tanker.nas
+    </open>
+  </nasal>-->
+
+  <text>
+    <label></label>
+  </text>
+  <text>
+    <label>Tanker TACAN at 042X</label>
+  </text>
+ 
+  <group>
+   <layout>hbox</layout>
+
+   <text>
+    <label>Select Tanker Altitude</label>
+    <halign>left</halign>
+   </text>
+
+    <combo>
+     <width>200</width>
+     <property>ai/tanker/altitude-ft</property>
+     <value>3000</value>
+     <value>6000</value>
+     <value>12000</value>
+     <value>18000</value>
+     <value>21000</value>
+     <value>24000</value>
+     <value>27000</value>
+     <binding>
+        <command>dialog-apply</command>
+     </binding>
+    </combo>
+  </group>
+
+  <text>
+    <label></label>
+  </text>
+
+  <hrule/>
+  
+  <button>
+    <legend>Close</legend>
+    <binding>
+     <command>dialog-close</command>
+    </binding>
+   </button>
+
+</PropertyList>

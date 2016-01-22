@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>fuelvalves.ac</path>
+ 
+
+ <!-- fuel valves tank3-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>switch_1</object-name>
+	 <property>consumables/fuel/tank[2]/selected</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.005</x-m>
+		 <y-m>-0.028</y-m>
+		 <z-m>-0.051</z-m>
+   </center>
+ </animation>
+ 
+ <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>consumables/fuel/tank[2]/selected</property>
+		 </binding>
+	 </action>
+</animation>
+
+<!-- fuel valves tank2-->
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_3</object-name>
+	<property>consumables/fuel/tank[3]/selected</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.028</y-m>
+		<z-m>-0.051</z-m>
+	</center>
+</animation>
+
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_3</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>consumables/fuel/tank[3]/selected</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- fuel valves tank wgl-->
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_wgl</object-name>
+	<property>consumables/fuel/tank[0]/selected</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.028</y-m>
+		<z-m>-0.051</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_wgl</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>consumables/fuel/tank[0]/selected</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- fuel valves tank wgr-->
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_wgr</object-name>
+	<property>consumables/fuel/tank[1]/selected</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.028</y-m>
+		<z-m>-0.051</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_wgr</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>consumables/fuel/tank[1]/selected</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- fuel valves tank wgr-->
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_2</object-name>
+	<property>consumables/fuel/tank[4]/selected</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.028</y-m>
+		<z-m>-0.051</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_2</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>consumables/fuel/tank[4]/selected</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- fuel valves tank wgr-->
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_4</object-name>
+	<property>consumables/fuel/tank[5]/selected</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.028</y-m>
+		<z-m>-0.051</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_4</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>consumables/fuel/tank[5]/selected</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- collectors -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_lmain</object-name>
+	<property>consumables/fuel/tank[6]/selected</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.028</y-m>
+		<z-m>-0.051</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_lmain</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>consumables/fuel/tank[6]/selected</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_rmain</object-name>
+	<property>consumables/fuel/tank[7]/selected</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.028</y-m>
+		<z-m>-0.051</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_rmain</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>consumables/fuel/tank[7]/selected</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>switch_1</object-name>
+	<object-name>switch_3</object-name>
+	<object-name>switch_wgl</object-name>
+	<object-name>switch_wgr</object-name>
+	<object-name>switch_2</object-name>
+	<object-name>switch_4</object-name>
+	<object-name>switch_lmain</object-name>
+	<object-name>switch_rmain</object-name>
+	<object-name>fuel_valves</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+
+<!--
+<animation>
+	<type>pick</type>
+	<object-name>ALT.minus</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>/instrumentation/altimeter/setting-inhg</property>
+			<step>-0.01</step>
+			<min>26.0</min>
+			<max>33.0</max>
+			<wrap>false</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>/instrumentation/altimeter/setting-inhg</property>
+			<step>-0.1</step>
+			<min>26.0</min>
+			<max>33.0</max>
+			<wrap>false</wrap>
+		</binding>
+	</action>
+</animation>
+ -->
+
+</PropertyList>

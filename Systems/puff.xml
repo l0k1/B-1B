@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>puff.ac</path>
+
+ <animation>
+  <type>billboard</type>
+  <spherical>true</spherical>
+ </animation>
+
+
+ <!--<animation>
+  <type>blend</type>
+  <object-name>puff</object-name>
+  <property>sim/time/elapsed-sec</property>
+  <factor>0.05</factor>
+</animation>-->
+ 
+ <animation>
+	 <type>select</type>
+	 <name>smoke</name>
+	 <object-name>puff</object-name>
+	 <condition>
+		 <and>
+		 <greater-than>
+			 <property>/velocities/airspeed-kt</property>
+			 <value>120</value>
+		 </greater-than>
+		 <less-than>
+			 <property>/accelerations/pilot/x-accel-fps_sec</property>
+			 <value>0</value>
+		 </less-than>
+	 </and>
+	 </condition>
+ </animation>
+ 
+</PropertyList>

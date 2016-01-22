@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>fuelpos_ind.ac</path>
+ 
+
+ <!-- fuel positions -->
+ <animation>
+	 <type>material</type>
+	 <object-name>glas_face.006</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
+
+ 
+</PropertyList>

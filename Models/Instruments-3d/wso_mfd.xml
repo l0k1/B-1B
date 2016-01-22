@@ -1,0 +1,987 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+<path>wso_mfd.ac</path>
+
+<text>
+  <name>position</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>0.070</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">MENU:</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<text>
+  <name>line00</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.070</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line00</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<!-- footer -->
+<text>
+  <name>line01</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>-0.060</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line01</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<!-- line 1 -->
+<text>
+  <name>line10</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>0.047</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line10</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line11</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>0.047</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line11</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line11</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line11</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+<text>
+  <name>line12</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.020</y-m>
+    <z-m>0.047</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line12</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line13</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>0.047</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line13</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line13</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line13</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+
+<!-- line 2 -->
+<text>
+  <name>line20</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>0.034</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line20</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line21</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>0.034</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line21</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line21</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line21</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+<text>
+  <name>line22</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.020</y-m>
+    <z-m>0.034</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line22</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line23</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>0.034</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line23</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line23</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line23</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+
+<!-- line 3 -->
+<text>
+  <name>line30</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>0.021</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line30</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line31</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>0.021</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line31</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line31</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line31</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+<text>
+  <name>line32</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.020</y-m>
+    <z-m>0.021</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line32</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line33</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>0.021</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line33</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line33</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line33</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+
+<!-- line 4 -->
+<text>
+  <name>line40</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line40</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line41</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line41</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line41</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line41</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+<text>
+  <name>line42</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.020</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line42</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line43</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line43</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line43</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line43</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+
+<!-- line 5 -->
+<text>
+  <name>line50</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>-0.005</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line50</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line51</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>-0.005</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line51</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line51</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line51</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+<text>
+  <name>line52</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.020</y-m>
+    <z-m>-0.005</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line52</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line53</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>-0.005</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line53</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line53</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line53</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+
+<!-- line 6 -->
+<text>
+  <name>line60</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>-0.018</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line60</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line61</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>-0.018</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line61</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line61</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line61</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+<text>
+  <name>line62</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.020</y-m>
+    <z-m>-0.018</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line62</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line63</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>-0.018</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line63</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line63</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line63</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+
+<!-- line 7 -->
+<text>
+  <name>line70</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>-0.031</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line70</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line71</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>-0.031</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line71</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line71</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line71</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+<text>
+  <name>line72</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.020</y-m>
+    <z-m>-0.031</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line72</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line73</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>-0.031</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line73</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line73</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line73</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+
+<!-- line 8 -->
+<text>
+  <name>line80</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.090</y-m>
+    <z-m>-0.044</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line80</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line81</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>-0.044</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line81</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line81</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line81</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+<text>
+  <name>line82</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.020</y-m>
+    <z-m>-0.044</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/wso_mfd/line82</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>line83</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.100</y-m>
+    <z-m>-0.044</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/wso_mfd/line83</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.5lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<animation>
+  <type>select</type>
+  <object-name>line83</object-name>
+  <condition>
+    <not>
+    <equals>
+      <property>instrumentation/wso_mfd/line83</property>
+      <value>0.00000</value>
+    </equals>
+    </not>
+  </condition>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>position</object-name>
+  <object-name>line00</object-name>
+  <object-name>line01</object-name>
+  <object-name>line10</object-name>
+  <object-name>line11</object-name>
+  <object-name>line12</object-name>
+  <object-name>line13</object-name>
+  <object-name>line20</object-name>
+  <object-name>line21</object-name>
+  <object-name>line22</object-name>
+  <object-name>line23</object-name>
+  <object-name>line30</object-name>
+  <object-name>line31</object-name>
+  <object-name>line32</object-name>
+  <object-name>line33</object-name>
+  <object-name>line40</object-name>
+  <object-name>line41</object-name>
+  <object-name>line42</object-name>
+  <object-name>line43</object-name>
+  <object-name>line50</object-name>
+  <object-name>line51</object-name>
+  <object-name>line52</object-name>
+  <object-name>line53</object-name>
+  <object-name>line60</object-name>
+  <object-name>line61</object-name>
+  <object-name>line62</object-name>
+  <object-name>line63</object-name>
+  <object-name>line70</object-name>
+  <object-name>line71</object-name>
+  <object-name>line72</object-name>
+  <object-name>line73</object-name>
+  <object-name>line80</object-name>
+  <object-name>line81</object-name>
+  <object-name>line82</object-name>
+  <object-name>line83</object-name>
+
+	 <diffuse>
+	   <red>0.4</red>
+	   <green>0.9</green>
+	   <blue>0.4</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.4</red>
+	   <green>0.9</green>
+	   <blue>0.4</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.4</red>
+		 <green>0.9</green>
+		 <blue>0.4</blue>
+	 </emission>
+</animation>
+
+</PropertyList>

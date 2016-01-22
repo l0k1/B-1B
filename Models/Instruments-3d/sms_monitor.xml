@@ -1,0 +1,3373 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+<path>sms_monitor.ac</path>
+ 
+<!-- top menu -->
+
+<text>
+  <name>position</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+ 
+  <type type="string">literal</type>
+  <text type="string">POS</text>
+  <layout>left-to-right</layout>
+ 
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+ 
+  <type type="string">literal</type>
+  <text type="string">TYPE</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>state</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">STATE</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>distance</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.010</y-m>
+    <z-m>0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">DIST</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>time</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.070</y-m>
+    <z-m>0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TIME</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<!-- bay fwd -->
+<text>
+  <name>fwd1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.083</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">FWD1</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_fwd1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.083</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_fwd1</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack0</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_fwd1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.083</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_fwd1</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack0-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay0_dist1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.083</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[0]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay0_time1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.083</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[0]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>fwd2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">FWD2</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_fwd2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_fwd2</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack1</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_fwd2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_fwd2</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack1-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay0_dist2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[1]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay0_time2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[1]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+
+<text>
+  <name>fwd3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.067</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">FWD3</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_fwd3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.067</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_fwd3</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack2</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_fwd3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.067</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_fwd3</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack2-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay0_dist3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.067</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[2]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay0_time3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.067</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[2]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>fwd4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.059</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">FWD4</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_fwd4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.059</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_fwd4</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack3</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_fwd4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.059</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_fwd4</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack3-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay0_dist4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.059</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[3]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay0_time4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.059</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[3]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+ 
+<text>
+  <name>fwd5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.051</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">FWD5</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_fwd5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.051</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_fwd5</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack4</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_fwd5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.051</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_fwd5</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack4-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay0_dist5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.051</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[4]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay0_time5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.051</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[4]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>fwd6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.043</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">FWD6</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_fwd6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.043</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_fwd6</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack5</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_fwd6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.043</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_fwd6</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack5-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay0_dist6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.043</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[5]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay0_time6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.043</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[5]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>fwd7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.035</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">FWD7</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_fwd7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.035</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_fwd7</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack6</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_fwd7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.035</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_fwd7</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack6-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay0_dist7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.035</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[6]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay0_time7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.035</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[6]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>fwd8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.027</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">FWD8</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_fwd8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.027</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_fwd8</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack7</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_fwd8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.027</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_fwd8</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay0/rack7-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+ <text>
+  <name>bay0_dist8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.027</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[7]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay0_time8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.027</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay0/bomb[7]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<!-- bay intmd -->
+<text>
+  <name>imd1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">IMD1</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_imd1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_imd1</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack0</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_imd1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_imd1</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack0-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay1_dist1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[0]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay1_time1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[0]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>imd2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">IMD2</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_imd2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_imd2</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack1</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_imd2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_imd2</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack1-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay1_dist2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[1]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay1_time2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[1]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>imd3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>0.000</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">IMD3</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_imd3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.000</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_imd3</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack2</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_imd3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.000</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_imd3</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack2-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay1_dist3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>0.000</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[2]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay1_time3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.000</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[2]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>imd4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">IMD4</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_imd4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_imd4</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack3</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_imd4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_imd4</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack3-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay1_dist4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+ 
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[3]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay1_time4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.008</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[3]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>imd5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">IMD5</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_imd5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_imd5</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack4</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_imd5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_imd5</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack4-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay1_dist5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[4]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay1_time5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.016</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[4]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>imd6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.024</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">IMD6</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_imd6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.024</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_imd6</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack5</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_imd6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.024</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_imd6</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack5-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay1_dist6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.024</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[5]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay1_time6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.024</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[5]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>imd7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.032</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">IMD7</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_imd7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.032</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_imd7</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack6</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_imd7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.032</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_imd7</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack6-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay1_dist7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.032</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[6]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay1_time7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.032</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[6]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>imd8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.040</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">IMD8</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_imd8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.040</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_imd8</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack7</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_imd8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.040</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_imd8</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay1/rack7-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay1_dist8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.040</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[7]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay1_time8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.040</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[7]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<!-- AFT BAY -->
+
+<text>
+  <name>aft1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.054</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">AFT1</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_aft1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.054</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_aft1</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack0</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_aft1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.054</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_aft1</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack0-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay2_dist1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.054</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[0]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay2_time1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.054</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[0]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>aft2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.062</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">AFT2</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_aft2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.062</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_aft2</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack1</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_aft2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.062</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_aft2</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack1-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay2_dist2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.062</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[1]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay2_time2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.062</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[1]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+
+<text>
+  <name>aft3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.070</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">AFT3</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_aft3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.070</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_aft3</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack2</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_aft3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.070</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_aft3</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack2-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay2_dist3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.070</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[2]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay2_time3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.070</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[2]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>aft4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.078</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">AFT4</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_aft4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.078</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_aft4</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack3</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_aft4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.078</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_aft4</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack3-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay2_dist4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.078</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[3]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay2_time4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.078</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[3]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+ 
+<text>
+  <name>aft5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.086</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">AFT5</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_aft5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.086</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_aft5</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack4</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_aft5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.086</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_aft5</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack4-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay2_dist5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.086</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[4]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay2_time5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.086</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[4]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>aft6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">AFT6</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_aft6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_aft6</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack5</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_aft6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_aft6</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack5-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay2_dist6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[5]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay2_time6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.094</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[5]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>aft7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.102</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">AFT7</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_aft7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.102</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_aft7</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack6</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_aft7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.102</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_aft7</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack6-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>bay2_dist7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.102</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[6]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay2_time7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.102</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[6]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>aft8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.110</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">AFT8</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>type_aft8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>-0.110</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">GBU-31</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>type_aft8</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack7</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+<text>
+  <name>state_aft8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>-0.110</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">ARMED</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<animation>
+	 <type>select</type>
+  <object-name>state_aft8</object-name>
+	 <condition>
+		 <equals>
+      <property>armament/bay2/rack7-armed</property>
+      <value type="int">1</value>
+		 </equals>
+	 </condition>
+</animation>
+ <text>
+  <name>bay2_dist8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.040</y-m>
+    <z-m>-0.110</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[7]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bay2_time8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>0.095</y-m>
+    <z-m>-0.110</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay2/bomb[7]/target-distance-sec</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.0lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.007</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<animation>
+  <type>material</type>
+  <object-name>position</object-name>
+  <object-name>type</object-name>
+  <object-name>state</object-name>
+  <object-name>distance</object-name>
+  <object-name>time</object-name>
+  <object-name>fwd1</object-name>
+  <object-name>type_fwd1</object-name>
+  <object-name>state_fwd1</object-name>
+  <object-name>bay0_dist1</object-name>
+  <object-name>bay0_time1</object-name>
+  <object-name>fwd2</object-name>
+  <object-name>type_fwd2</object-name>
+  <object-name>state_fwd2</object-name>
+  <object-name>bay0_dist2</object-name>
+  <object-name>bay0_time2</object-name>
+  <object-name>fwd3</object-name>
+  <object-name>type_fwd3</object-name>
+  <object-name>state_fwd3</object-name>
+  <object-name>bay0_dist3</object-name>
+  <object-name>bay0_time3</object-name>
+  <object-name>fwd4</object-name>
+  <object-name>type_fwd4</object-name>
+  <object-name>state_fwd4</object-name>
+  <object-name>bay0_dist4</object-name>
+  <object-name>bay0_time4</object-name>
+  <object-name>fwd5</object-name>
+  <object-name>type_fwd5</object-name>
+  <object-name>state_fwd5</object-name>
+  <object-name>bay0_dist5</object-name>
+  <object-name>bay0_time5</object-name>
+  <object-name>fwd6</object-name>
+  <object-name>type_fwd6</object-name>
+  <object-name>state_fwd6</object-name>
+  <object-name>bay0_dist6</object-name>
+  <object-name>bay0_time6</object-name>
+  <object-name>fwd7</object-name>
+  <object-name>type_fwd7</object-name>
+  <object-name>state_fwd7</object-name>
+  <object-name>bay0_dist7</object-name>
+  <object-name>bay0_time7</object-name>
+  <object-name>fwd8</object-name>
+  <object-name>type_fwd8</object-name>
+  <object-name>state_fwd8</object-name>
+  <object-name>bay0_dist8</object-name>
+  <object-name>bay0_time8</object-name>
+  
+  <object-name>imd1</object-name>
+  <object-name>type_imd1</object-name>
+  <object-name>state_imd1</object-name>
+  <object-name>bay1_dist1</object-name>
+  <object-name>bay1_time1</object-name>
+  <object-name>imd2</object-name>
+  <object-name>type_imd2</object-name>
+  <object-name>state_imd2</object-name>
+  <object-name>bay1_dist2</object-name>
+  <object-name>bay1_time2</object-name>
+  <object-name>imd3</object-name>
+  <object-name>type_imd3</object-name>
+  <object-name>state_imd3</object-name>
+  <object-name>bay1_dist3</object-name>
+  <object-name>bay1_time3</object-name>
+  <object-name>imd4</object-name>
+  <object-name>type_imd4</object-name>
+  <object-name>state_imd4</object-name>
+  <object-name>bay1_dist4</object-name>
+  <object-name>bay1_time4</object-name>
+  <object-name>imd5</object-name>
+  <object-name>type_imd5</object-name>
+  <object-name>state_imd5</object-name>
+  <object-name>bay1_dist5</object-name>
+  <object-name>bay1_time5</object-name>
+  <object-name>imd6</object-name>
+  <object-name>type_imd6</object-name>
+  <object-name>state_imd6</object-name>
+  <object-name>bay1_dist6</object-name>
+  <object-name>bay1_time6</object-name>
+  <object-name>imd7</object-name>
+  <object-name>type_imd7</object-name>
+  <object-name>state_imd7</object-name>
+  <object-name>bay1_dist7</object-name>
+  <object-name>bay1_time7</object-name>
+  <object-name>imd8</object-name>
+  <object-name>type_imd8</object-name>
+  <object-name>state_imd8</object-name>
+  <object-name>bay1_dist8</object-name>
+  <object-name>bay1_time8</object-name>
+  
+  <object-name>aft1</object-name>
+  <object-name>type_aft1</object-name>
+  <object-name>state_aft1</object-name>
+  <object-name>bay2_dist1</object-name>
+  <object-name>bay2_time1</object-name>
+  <object-name>aft2</object-name>
+  <object-name>type_aft2</object-name>
+  <object-name>state_aft2</object-name>
+  <object-name>bay2_dist2</object-name>
+  <object-name>bay2_time2</object-name>
+  <object-name>aft3</object-name>
+  <object-name>type_aft3</object-name>
+  <object-name>state_aft3</object-name>
+  <object-name>bay2_dist3</object-name>
+  <object-name>bay2_time3</object-name>
+  <object-name>aft4</object-name>
+  <object-name>type_aft4</object-name>
+  <object-name>state_aft4</object-name>
+  <object-name>bay2_dist4</object-name>
+  <object-name>bay2_time4</object-name>
+  <object-name>aft5</object-name>
+  <object-name>type_aft5</object-name>
+  <object-name>state_aft5</object-name>
+  <object-name>bay2_dist5</object-name>
+  <object-name>bay2_time5</object-name>
+  <object-name>aft6</object-name>
+  <object-name>type_aft6</object-name>
+  <object-name>state_aft6</object-name>
+  <object-name>bay2_dist6</object-name>
+  <object-name>bay2_time6</object-name>
+  <object-name>aft7</object-name>
+  <object-name>type_aft7</object-name>
+  <object-name>state_aft7</object-name>
+  <object-name>bay2_dist7</object-name>
+  <object-name>bay2_time7</object-name>
+  <object-name>aft8</object-name>
+  <object-name>type_aft8</object-name>
+  <object-name>state_aft8</object-name>
+  <object-name>bay2_dist8</object-name>
+  <object-name>bay2_time8</object-name>
+
+	 <diffuse>
+	   <red>0.4</red>
+	   <green>0.9</green>
+	   <blue>0.4</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.4</red>
+	   <green>0.9</green>
+	   <blue>0.4</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.4</red>
+		 <green>0.9</green>
+		 <blue>0.4</blue>
+	 </emission>
+</animation>
+
+<animation>
+	 <type>select</type>
+	 <object-name>status_lau</object-name>
+	 <condition>
+		 <or>
+		 <equals>
+			 <property>armament/bay0/launcher-pos</property>
+			 <value>0.0</value>
+		 </equals>
+		 <equals>
+			 <property>armament/bay0/launcher-pos</property>
+			 <value>8.0</value>
+		 </equals>
+	 	 </or>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.001</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay0/launcher-pos</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.002</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay0/launcher-pos</property>
+			 <value>2.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.003</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay0/launcher-pos</property>
+			 <value>3.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.004</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay0/launcher-pos</property>
+			 <value>4.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.005</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay0launcher-pos</property>
+			 <value>5.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.006</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay0/launcher-pos</property>
+			 <value>6.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.007</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay0/launcher-pos</property>
+			 <value>7.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.008</object-name>
+	 <condition>
+		 <or>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>0.0</value>
+		 </equals>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>8.0</value>
+		 </equals>
+	 	 </or>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.009</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.010</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>2.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.011</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>3.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.012</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>4.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.013</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>5.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.014</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>6.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.015</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay1/launcher-pos</property>
+			 <value>7.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+  <animation>
+	 <type>select</type>
+	 <object-name>status_lau.016</object-name>
+	 <condition>
+		 <or>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>0.0</value>
+		 </equals>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>8.0</value>
+		 </equals>
+	 	 </or>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.017</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.018</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>2.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.019</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>3.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.020</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>4.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.021</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>5.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.022</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>6.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>status_lau.023</object-name>
+	 <condition>
+		 <equals>
+			 <property>armament/bay2/launcher-pos</property>
+			 <value>7.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+
+
+</PropertyList>

@@ -1,0 +1,414 @@
+<!--
+maggse
+-->
+
+<PropertyList>
+
+<path>ikb.ac</path>
+
+<!-- num block buttons -->
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.045</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.044</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(2)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.043</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(3)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.042</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(4)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.041</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(5)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.040</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(6)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.039</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(7)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.038</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(8)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.037</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(9)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.047</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_ikb_number(0)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+<!-- prev/next select buttons -->
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.056</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.031</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(-1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_draw()</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+<!-- menu/set buttons -->
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.050</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,0)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.057</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,1)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.058</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,2)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.060</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,3)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.059</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,4)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.064</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,5)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.063</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,6)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.061</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,7)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.062</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(1,8)</script>
+		 </binding>
+
+	 </action>
+</animation>
+<animation>
+	 <type>pick</type>
+	 <object-name>sms_button.065</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.2</interval-sec>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.wso_mfd_update(-1,1)</script>
+		 </binding>
+
+	 </action>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>sms_button.031</object-name>
+  <object-name>sms_button.056</object-name>
+  <object-name>sms_button.047</object-name>
+  <object-name>sms_button.037</object-name>
+  <object-name>sms_button.038</object-name>
+  <object-name>sms_button.039</object-name>
+  <object-name>sms_button.040</object-name>
+  <object-name>sms_button.041</object-name>
+  <object-name>sms_button.042</object-name>
+  <object-name>sms_button.043</object-name>
+  <object-name>sms_button.044</object-name>
+  <object-name>sms_button.045</object-name>
+  <object-name>sms_button.050</object-name>
+  <object-name>sms_button.057</object-name>
+  <object-name>sms_button.058</object-name>
+  <object-name>sms_button.059</object-name>
+  <object-name>sms_button.060</object-name>
+  <object-name>sms_button.061</object-name>
+  <object-name>sms_button.062</object-name>
+  <object-name>sms_button.063</object-name>
+  <object-name>sms_button.064</object-name>
+  <object-name>sms_button.065</object-name>
+  <emission>
+	<red>0.6</red>
+	<green>0.4</green>
+	<blue>0.4</blue>
+	<factor-prop>controls/lighting/instruments-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>ikb</object-name>
+  <emission>
+	<red>0.3</red>
+	<green>0.2</green>
+	<blue>0.2</blue>
+	<factor-prop>controls/lighting/instruments-norm</factor-prop>
+  </emission>
+</animation>
+
+</PropertyList>

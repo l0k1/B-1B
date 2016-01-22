@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>fltdir.ac</path>
+ 
+ <!-- flt dir mode toggle -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>knob_fltdir</object-name>
+	<property>controls/switches/fltdir</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>45.0</dep>
+		</entry>
+		<entry>
+			<ind>0.25</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>0.50</ind>
+			<dep>-90</dep>
+		</entry>
+		<entry>
+			<ind>0.75</ind>
+			<dep>-135</dep>
+		</entry>
+		<entry>
+			<ind>1.00</ind>
+			<dep>-180</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.013</x-m>
+		<y-m>0.053</y-m>
+		<z-m>0.097</z-m>
+	</center>
+</animation>
+<animation>
+	<type>material</type>
+	<object-name>knob_fltdir</object-name>
+	<emission>
+		<red>0.7</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>knob_fltdir</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/fltdir</property>
+			<step>0.25</step>
+			<min>0.0</min>
+			<max>1.00</max>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.fltdir()</script>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/fltdir</property>
+			<step>-0.25</step>
+			<min>0.0</min>
+			<max>1.00</max>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.fltdir()</script>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>fltdir</object-name>
+	<emission>
+		<red>0.7</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+
+</PropertyList>

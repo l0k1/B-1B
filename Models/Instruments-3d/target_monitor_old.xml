@@ -1,0 +1,1216 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+<path>target_monitor.ac</path>
+ 
+<!--targets-->
+
+<animation>
+	 <type>select</type>
+	 <object-name>target_01</object-name>
+	 <condition>
+	<less-than>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+		 <value>10</value>
+	</less-than>
+	 </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_01</object-name>
+   <property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_01</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_01</object-name>
+	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_02</object-name>
+  <condition>
+	<less-than>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_02</object-name>
+   <property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_02</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_02</object-name>
+	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_03</object-name>
+  <condition>
+	<less-than>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_03</object-name>
+   <property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_03</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_03</object-name>
+	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_04</object-name>
+  <condition>
+	<less-than>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_04</object-name>
+   <property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_04</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_04</object-name>
+	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_05</object-name>
+  <condition>
+	<less-than>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_05</object-name>
+   <property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_05</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_05</object-name>
+	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_06</object-name>
+  <condition>
+	<less-than>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_06</object-name>
+   <property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_06</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_06</object-name>
+	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_07</object-name>
+  <condition>
+	<less-than>
+	<property>ai/models/aircraft[6]/radar/range-nm[0]</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_07</object-name>
+   <property>ai/models/aircraft[6]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_07</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_07</object-name>
+	<property>ai/models/aircraft[6]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_08</object-name>
+  <condition>
+	<less-than>
+	<property>ai/models/aircraft[7]/radar/range-nm[0]</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_08</object-name>
+   <property>ai/models/aircraft[7]/radar/bearing-deg[0]</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_08</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+ <animation> 
+	<type>translate</type>
+	<object-name>target_08</object-name>
+	<property>ai/models/aircraft[7]/radar/range-nm[0]</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<!-- target marker -->
+<animation> 
+  <type>select</type>
+  <object-name>target_mark1</object-name>
+  <condition>
+	<less-than>
+	<property>ai/guided/bay1/bomb[0]/target-distance</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark1</object-name>
+   <property>ai/guided/bay1/bomb[0]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark1</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+<animation> 
+	<type>translate</type>
+	<object-name>target_mark1</object-name>
+	<property>ai/guided/bay1/bomb[0]/target-distance</property>
+<factor>0.0080</factor>
+<axis> 
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_mark2</object-name>
+  <condition>
+	<less-than>
+	<property>ai/guided/bay1/bomb[1]/target-distance</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark2</object-name>
+   <property>ai/guided/bay1/bomb[1]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark2</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>target_mark2</object-name>
+	<property>ai/guided/bay1/bomb[1]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_mark3</object-name>
+  <condition>
+	<less-than>
+	<property>ai/guided/bay1/bomb[2]/target-distance</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark3</object-name>
+   <property>ai/guided/bay1/bomb[2]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark3</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>target_mark3</object-name>
+	<property>ai/guided/bay1/bomb[2]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<animation> 
+  <type>select</type>
+  <object-name>target_mark4</object-name>
+  <condition>
+	<less-than>
+	<property>ai/guided/bay1/bomb[3]/target-distance</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark4</object-name>
+   <property>ai/guided/bay1/bomb[3]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark4</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+
+ <animation> 
+	<type>translate</type>
+	<object-name>target_mark4</object-name>
+	<property>ai/guided/bay1/bomb[3]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+ 
+<animation>
+  <type>select</type>
+  <object-name>target_mark5</object-name>
+  <condition>
+	<less-than>
+	<property>ai/guided/bay1/bomb[4]/target-distance</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark5</object-name>
+   <property>ai/guided/bay1/bomb[4]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark5</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+<animation> 
+	<type>translate</type>
+	<object-name>target_mark5</object-name>
+	<property>ai/guided/bay1/bomb[4]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>target_mark6</object-name>
+  <condition>
+	<less-than>
+	<property>ai/guided/bay1/bomb[5]/target-distance</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark6</object-name>
+   <property>ai/guided/bay1/bomb[5]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark6</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+<animation> 
+	<type>translate</type>
+	<object-name>target_mark6</object-name>
+	<property>ai/guided/bay1/bomb[5]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>target_mark7</object-name>
+  <condition>
+	<less-than>
+	<property>ai/guided/bay1/bomb[6]/target-distance</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark7</object-name>
+   <property>ai/guided/bay1/bomb[6]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark7</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+<animation> 
+	<type>translate</type>
+	<object-name>target_mark7</object-name>
+	<property>ai/guided/bay1/bomb[6]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>target_mark8</object-name>
+  <condition>
+	<less-than>
+	<property>ai/guided/bay1/bomb[7]/target-distance</property>
+	<value>10</value>
+	</less-than>
+  </condition>
+</animation>
+<animation> 
+   <type>rotate</type>
+   <object-name>target_mark8</object-name>
+   <property>ai/guided/bay1/bomb[7]/target-bearing</property>
+     <axis> 
+       <x>-1</x>
+       <y>0</y>
+       <z>0</z>
+     </axis>
+     <center>
+       <x-m>0.009</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+     </center>
+</animation>
+<animation> 
+  <type>rotate</type>
+  <object-name>target_mark8</object-name>
+  <property>orientation/heading-deg[0]</property>
+    <axis> 
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.09</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+</animation>
+<animation> 
+	<type>translate</type>
+	<object-name>target_mark8</object-name>
+	<property>ai/guided/bay1/bomb[7]/target-distance</property>
+  <factor>0.0080</factor>
+  <axis> 
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<!-- OSG text animation -->
+
+<text>
+  <name>tgt1</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.030</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TGT1</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>tgt1_dist</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>-0.030</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[0]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<text>
+  <name>tgt2</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.039</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TGT2</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>tgt2_dist</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>-0.039</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[1]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<text>
+  <name>tgt3</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.048</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TGT3</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>tgt3_dist</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>-0.048</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[2]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<text>
+  <name>tgt4</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.057</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TGT4</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>tgt4_dist</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>-0.057</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[3]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<text>
+  <name>tgt5</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.066</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TGT5</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>tgt5_dist</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>-0.066</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[4]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<text>
+  <name>tgt6</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TGT6</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>tgt6_dist</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>-0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[5]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<text>
+  <name>tgt7</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.084</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TGT7</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>tgt7_dist</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>-0.084</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[6]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<text>
+  <name>tgt8</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.098</y-m>
+    <z-m>-0.093</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">TGT8</text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+<text>
+  <name>tgt8_dist</name>
+  <offsets>
+    <x-m>0.008</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>-0.093</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">ai/guided/bay1/bomb[7]/target-distance</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+</text>
+
+<animation>
+  <type>material</type>
+  <object-name>tgt1</object-name>
+  <object-name>tgt1_dist</object-name>
+  <object-name>tgt2</object-name>
+  <object-name>tgt2_dist</object-name>
+  <object-name>tgt3</object-name>
+  <object-name>tgt3_dist</object-name>
+  <object-name>tgt4</object-name>
+  <object-name>tgt4_dist</object-name>
+  <object-name>tgt5</object-name>
+  <object-name>tgt5_dist</object-name>
+  <object-name>tgt6</object-name>
+  <object-name>tgt6_dist</object-name>
+  <object-name>tgt7</object-name>
+  <object-name>tgt7_dist</object-name>
+  <object-name>tgt8</object-name>
+  <object-name>tgt8_dist</object-name>
+	 
+	 <diffuse>
+		<red>0.2</red>
+	   <green>0.9</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.2</red>
+	   <green>0.9</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.4</red>
+		 <green>0.9</green>
+		 <blue>0.4</blue>
+	</emission>
+</animation>
+
+</PropertyList>

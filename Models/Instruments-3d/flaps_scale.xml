@@ -1,0 +1,20 @@
+<!--
+maggse
+-->
+
+<PropertyList>
+
+ <path>flaps_scale.ac</path>
+
+ <animation>
+	 <type>material</type>
+	 <object-name>fuel_cov.006</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
+
+</PropertyList>

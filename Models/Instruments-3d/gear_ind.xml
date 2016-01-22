@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>gear_ind.ac</path>
+ 
+ <!-- gear switch -->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>switch_gear</object-name>
+	 <property>controls/gear/gear-down</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.013</x-m>
+		 <y-m>-0.156</y-m>
+		 <z-m>0.115</z-m>
+	 </center>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>switch_gear</object-name>
+	 <object-name>fuel_valves.002</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
+ 
+ <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_gear</object-name>
+	 <condition>
+		 <less-than>
+			 <property>gear/gear/wow</property>
+			 <value>1.0</value>
+		 </less-than>
+	 </condition>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/gear/gear-down</property>
+		 </binding>
+	 </action>
+</animation>
+ 
+<!-- gear ind -->
+
+ <animation>
+	 <type>select</type>
+	 <object-name>gearind_fr</object-name>
+	 <condition>
+		 <equals>
+			 <property>gear/gear[0]/position-norm</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>gearind_fr</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>gear/gear[0]/position-norm</factor-prop>
+	 </emission>
+</animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>gearind_bl</object-name>
+	 <condition>
+		 <equals>
+			 <property>gear/gear[1]/position-norm</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>gearind_bl</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>gear/gear[1]/position-norm</factor-prop>
+	 </emission>
+</animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>gearind_br</object-name>
+	 <condition>
+		 <equals>
+			 <property>gear/gear[3]/position-norm</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>gearind_br</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>gear/gear[3]/position-norm</factor-prop>
+	 </emission>
+</animation>
+
+
+
+</PropertyList>

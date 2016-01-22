@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>fcgms.ac</path>
+ 
+
+ <!-- fcgms switch on/off -->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>switch_fcgms</object-name>
+	 <property>controls/switches/cg-adjust</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.005</x-m>
+		 <y-m>0.485</y-m>
+		 <z-m>0.100</z-m>
+   </center>
+ </animation>
+ 
+ <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_fcgms</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/cg-adjust</property>
+		 </binding>
+		 <binding>
+			 <command>nasal</command>
+			 <script>cg.cg_adjust(0)</script>
+		 </binding>
+	 </action>
+</animation>
+
+
+
+
+<!-- terrain avoidance set clr setting -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>knob_fcgms</object-name>
+	<property>instrumentation/cg/cg_mac_set</property>
+	<interpolation>
+		<entry>
+			<ind>10.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		
+		<entry>
+			<ind>60.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.013</x-m>
+		<y-m>0.466</y-m>
+		<z-m>0.036</z-m>
+	</center>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>knob_fcgms</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/cg/cg_mac_set</property>
+			<step>1.0</step>
+			<min>10.0</min>
+			<max>60.0</max>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.1</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/cg/cg_mac_set</property>
+			<step>-1.0</step>
+			<min>10.0</min>
+			<max>60.0</max>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>switch_fcgms</object-name>
+	<object-name>knob_fcgms</object-name>
+	<object-name>face_fcgms</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+
+</PropertyList>

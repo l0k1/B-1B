@@ -1,0 +1,125 @@
+<PropertyList>
+
+ <name>failures</name>
+ <modal>false</modal>
+ <layout>vbox</layout>
+ 
+ <text>
+    <label>Engine Failures</label>
+ </text>
+
+ <hrule/>
+ 
+  <!--<nasal>
+    <open>
+	#nasal
+    </open>
+  </nasal>-->
+
+  <text>
+    <label></label>
+  </text>
+ 
+  <group>
+   <layout>vbox</layout>
+
+   <text>
+    <label>Set Engines or APUs on fire:</label>
+    <halign>left</halign>
+   </text>
+  <button>
+	<legend>Engine 1 On Fire</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+          <binding>
+                        <command>property-assign</command>
+                        <property>controls/engines/engine[0]/on-fire</property>
+                        <value type="double">1</value>
+          </binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+  <button>
+	<legend>Engine 2 On Fire</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+          <binding>
+                        <command>property-assign</command>
+                        <property>controls/engines/engine[1]/on-fire</property>
+                        <value type="double">1</value>
+          </binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+  <button>
+	<legend>Left APU On Fire</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+          <binding>
+                        <command>property-assign</command>
+                        <property>controls/APU/APUL-fire</property>
+                        <value type="double">1</value>
+          </binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+  <button>
+	<legend>Engine 3 On Fire</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+          <binding>
+                        <command>property-assign</command>
+                        <property>controls/engines/engine[2]/on-fire</property>
+                        <value type="double">1</value>
+          </binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+  <button>
+	<legend>Engine 4 On Fire</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+          <binding>
+                        <command>property-assign</command>
+                        <property>controls/engines/engine[3]/on-fire</property>
+                        <value type="double">1</value>
+          </binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+  <button>
+	<legend>Right APU On Fire</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+          <binding>
+                        <command>property-assign</command>
+                        <property>controls/APU/APUR-fire</property>
+                        <value type="double">1</value>
+          </binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+
+  </group>
+
+  <text>
+    <label></label>
+  </text>
+
+  
+  <hrule/>
+  
+  <button>
+    <legend>Close</legend>
+    <binding>
+     <command>dialog-close</command>
+    </binding>
+   </button>
+
+</PropertyList>

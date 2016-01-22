@@ -1,0 +1,158 @@
+<!--
+maggse
+-->
+
+<PropertyList>
+
+ <path>hud_mach.ac</path>
+
+
+ 
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>ind_mach1</object-name>
+   <property>velocities/mach</property>
+<interpolation>
+	<entry>
+		<ind>0</ind>
+		<dep>0.05</dep>
+     </entry>
+     <entry>
+             <ind>0.1</ind>
+             <dep>0</dep>
+     </entry>
+     <entry>
+	     <ind>1.5</ind>
+	     <dep>-0.703</dep>
+     </entry>
+</interpolation>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+  <center>
+	  <x-m>0.00</x-m>
+	  <y-m>0.00</y-m>
+	  <z-m>0.00</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ind_knots1</object-name>
+	 <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0.05</dep>
+		 </entry>
+		 <entry>
+			 <ind>100</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>900</ind>
+			 <dep>-0.800</dep>
+		 </entry>
+</interpolation>
+		 <axis>
+			 <x>0</x>
+			 <y>1</y>
+			 <z>0</z>
+		 </axis>
+		 <center>
+			 <x-m>0.00</x-m>
+			 <y-m>0.00</y-m>
+			 <z-m>0.00</z-m>
+		 </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_fcgms_mode.002</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>autopilot/settings/target-speed-kt</property>
+			 <step>1</step>
+			 <min>0.0</min>
+			 <max>900.0</max>
+		 </binding>
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>autopilot/settings/target-speed-kt</property>
+			 <step>-1</step>
+			 <min>0.0</min>
+			 <max>900.0</max>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>macfuel1.002</object-name>
+	<property>autopilot/settings/target-speed-kt</property>
+	<factor>0.001</factor>
+	<step>100</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>macfuel2.002</object-name>
+	<property>autopilot/settings/target-speed-kt</property>
+	<factor>0.01</factor>
+	<step>10</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>macfuel3.002</object-name>
+	<property>autopilot/settings/target-speed-kt</property>
+	<factor>0.1</factor>
+	<step>1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+ </animation>
+ 
+ <animation>
+	 <type>material</type>
+	 <object-name>ind_mach1</object-name>
+	 <object-name>ind_knots1</object-name>
+	 <object-name>switch_fcgms_mode.002</object-name>
+	 <object-name>macfuel1.002</object-name>
+	 <object-name>macfuel2.002</object-name>
+	 <object-name>macfuel3.002</object-name>
+	 <object-name>ind_alt_lmob.002</object-name>
+	 <emission>
+		 <red>0.6</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
+
+
+</PropertyList>

@@ -1,0 +1,563 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+<path>cdu900.ac</path>
+ 
+<text>
+  <name>line0</name>
+  <offsets>
+    <x-m>0.006</x-m><!--up/down-->
+    <y-m>-0.000</y-m><!--left/right-->
+    <z-m>0.06</z-m><!--front/rear-->
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/cdu900/line0</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <draw-boundingbox type="bool">false</draw-boundingbox>
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>line1</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.05</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/cdu900/line1</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>line2</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>0.030</y-m>
+    <z-m>0.04</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/cdu900/line2</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.2lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>line2_select</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>0.04</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">></text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<animation>
+  <type>select</type>
+  <object-name>line2_select</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/cdu900/line-selected</property>
+      <value type="int">2</value>
+    </equals>
+  </condition>
+</animation>
+
+<text>
+  <name>line3</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.03</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/cdu900/line3</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>line4</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>0.030</y-m>
+    <z-m>0.02</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/cdu900/line4</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
+  <format type="string">%5.2lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>line4_select</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>0.02</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">></text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<animation>
+  <type>select</type>
+  <object-name>line4_select</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/cdu900/line-selected</property>
+      <value type="int">4</value>
+    </equals>
+  </condition>
+</animation>
+
+<text>
+  <name>line5</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>-0.030</y-m>
+    <z-m>0.01</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">text-value</type>
+  <property type="string">instrumentation/cdu900/line5</property>
+  <format type="string">%s</format>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>line6</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>0.030</y-m>
+    <z-m>0.00</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>right-center</alignment>
+  
+  <type type="string">number-value</type>
+  <property type="string">instrumentation/cdu900/line6</property>
+  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
+  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
+  <format type="string">%5.2lf</format> <!-- the printf() format to display the value -->
+  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>line6_select</name>
+  <offsets>
+    <x-m>0.006</x-m>
+    <y-m>-0.040</y-m>
+    <z-m>0.00</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>left-center</alignment>
+  
+  <type type="string">literal</type>
+  <text type="string">></text>
+  <layout>left-to-right</layout>
+
+  <font>lucida.txf</font>
+  <character-size type="double">0.008</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<animation>
+  <type>select</type>
+  <object-name>line6_select</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/cdu900/line-selected</property>
+      <value type="int">6</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>line0</object-name>
+  <object-name>line1</object-name>
+  <object-name>line2</object-name>
+  <object-name>line3</object-name>
+  <object-name>line4</object-name>
+  <object-name>line5</object-name>
+  <object-name>line6</object-name>
+  <object-name>line2_select</object-name>
+  <object-name>line4_select</object-name>
+  <object-name>line6_select</object-name>
+  <diffuse>
+    <red>0.2</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+  </diffuse>
+  <ambient>
+    <red>0.1</red>
+    <green>0.8</green>
+    <blue>0.1</blue>
+  </ambient>
+  <emission>
+    <red>0.4</red>
+    <green>0.9</green>
+    <blue>0.4</blue>
+  </emission>
+</animation>
+
+<!-- menu buttons -->
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.051</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(0,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.052</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(1,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.053</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(2,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.054</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(3,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.055</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(4,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.056</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(5,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.057</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(6,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.058</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(7,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<!-- select/switch buttons -->
+
+<!-- line1 submenu switch -->
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.064</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-1,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.059</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-1,-1)</script>
+    </binding>
+  </action>
+</animation>
+
+<!-- line3 select -->
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.063</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-2,2)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.065</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-2,4)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.066</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.5</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-2,6)</script>
+    </binding>
+  </action>
+</animation>
+
+<!-- adjust arrows coarse and fine -->
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.050</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-10,1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.030</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-10,-1)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.029</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-10,-0.05)</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.037</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_set(-10,0.05)</script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>cdu_b.058</object-name>
+	<object-name>cdu_b.057</object-name>
+	<object-name>cdu_b.051</object-name>
+	<object-name>cdu_b.056</object-name>
+	<object-name>cdu_b.055</object-name>
+	<object-name>cdu_b.054</object-name>
+	<object-name>cdu_b.052</object-name>
+	<object-name>cdu_b.053</object-name>
+	<object-name>cdu_b.064</object-name>
+	<object-name>cdu_b.059</object-name>
+	<object-name>cdu_b.063</object-name>
+	<object-name>cdu_b.065</object-name>
+	<object-name>cdu_b.066</object-name>
+	<object-name>cdu_b.050</object-name>
+	<object-name>cdu_b.030</object-name>
+	<object-name>cdu_b.029</object-name>
+        <object-name>cdu_b.037</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>Bezel.001</object-name>
+	<emission>
+		<red>0.4</red>
+		<green>0.2</green>
+		<blue>0.15</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+</PropertyList>

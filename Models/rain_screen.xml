@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>rain_screen.osg</path>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>bone_rain</object-name>
+	 <property>instrumentation/rain/rain</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>bone_rain</object-name>
+	 <property>instrumentation/rain/rain</property>
+	 <factor>0.01</factor>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+
+</PropertyList>

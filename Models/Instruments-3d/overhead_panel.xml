@@ -1,0 +1,711 @@
+<!--
+maggse
+-->
+
+<PropertyList>
+
+ <path>overhead_panel.ac</path>
+ 
+ <!-- Refuel-->
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>knob_oh.013</object-name>
+	 <property>controls/switches/refuel-lid</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.01</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>-0.041</y-m>
+		 <z-m>0.223</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>knob_oh.013</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>1.0</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/refuel-lid</property>
+			 <condition>
+				 <property>controls/switches/refuel-slipway</property>
+				 <value>1</value>
+			 </condition>
+		 </binding>
+		 <binding>
+			 <command>nasal</command>
+			 <script>b1b.refuel_door()</script>
+			 <condition>
+				 <property>controls/switches/refuel-slipway</property>
+				 <value>1</value>
+			 </condition>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>systems/refuel/serviceable</property>
+			 <condition>
+				 <property>controls/switches/refuel-slipway</property>
+				 <value>1</value>
+			 </condition>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>knob_oh.013</object-name>
+	 <property>controls/switches/refuel-lid</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>20.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>-0.041</y-m>
+		 <z-m>0.223</z-m>
+   </center>
+ </animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>knob_oh.003</object-name>
+	 <property>controls/switches/refuel-slipway</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-80.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>0.040</y-m>
+		 <z-m>0.251</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>knob_oh.003</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/refuel-slipway</property>
+		 </binding>
+	 </action>
+</animation>
+ 
+ <!-- Battery-->
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.033</object-name>
+	 <property>controls/electric/battery-switch</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>-0.132</y-m>
+		 <z-m>0.177</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.033</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/electric/battery-switch</property>
+		 </binding>
+	 </action>
+</animation>
+
+<!-- APU-->
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.006</object-name>
+	 <property>controls/APU/APUL_running</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>0.143</y-m>
+		 <z-m>0.262</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.006</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUL_running</property>
+			 <condition>
+		           <or>
+		           <equals>
+			   <property>controls/electric/battery-switch</property>
+			   <value>1</value>
+		           </equals>
+		           <equals>
+			   <property>controls/APU/APUR_running</property>
+			   <value>1</value>
+		           </equals>
+		           <equals>
+			   <property>controls/APU/APUL_running</property>
+			   <value>1</value>
+		           </equals>
+	 	           </or>
+	                 </condition>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.007</object-name>
+	 <property>controls/APU/APUR_running</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>0.143</y-m>
+		 <z-m>0.262</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.007</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUR_running</property>
+			 	 <condition>
+		                   <or>
+		                   <equals>
+			           <property>controls/electric/battery-switch</property>
+			           <value>1</value>
+		                   </equals>
+		                   <equals>
+			           <property>controls/APU/APUL_running</property>
+			           <value>1</value>
+		                   </equals>
+		                   <equals>
+			           <property>controls/APU/APUR_running</property>
+			           <value>1</value>
+		                   </equals>
+	 	                   </or>
+	                        </condition>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.002</object-name>
+	 <property>controls/APU/APUL_couple</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>0.126</y-m>
+		 <z-m>0.294</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.002</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUL_couple</property>
+			 <condition>
+		           <or>
+		           <equals>
+			   <property>controls/APU/APUL_running</property>
+			   <value>1</value>
+		           </equals>
+	 	           </or>
+	                 </condition>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.003</object-name>
+	 <property>controls/APU/APUR_couple</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>0.193</y-m>
+		 <z-m>0.294</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.003</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUR_couple</property>
+			 <condition>
+		           <or>
+		           <equals>
+			   <property>controls/APU/APUR_running</property>
+			   <value>1</value>
+		           </equals>
+	 	           </or>
+	                 </condition>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.005</object-name>
+	 <property>controls/APU/APUL_bleed</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>0.112</y-m>
+		 <z-m>0.266</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.005</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUL_bleed</property>
+			 <condition>
+		           <equals>
+			     <property>controls/APU/APUL_running</property>
+			     <value>1</value>
+		           </equals>
+	                 </condition>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.004</object-name>
+	 <property>controls/APU/APUR_bleed</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>0.207</y-m>
+		 <z-m>0.266</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.004</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APUR_bleed</property>
+			 <condition>
+		           <equals>
+			   <property>controls/APU/APUR_running</property>
+			   <value>1</value>
+		           </equals>
+	                 </condition>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.001</object-name>
+	 <property>controls/APU/APU_crossbleed</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>0.160</y-m>
+		 <z-m>0.298</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.001</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/APU/APU_crossbleed</property>
+			 <condition>
+		           <or>
+		             <equals>
+			       <property>controls/APU/APUL_running</property>
+			       <value>1</value>
+		             </equals>
+		             <equals>
+			       <property>controls/APU/APUR_running</property>
+			       <value>1</value>
+		             </equals>
+	 	           </or>
+	                 </condition>
+		 </binding>
+	 </action>
+</animation>
+
+
+<!-- nav lights-->
+ <animation>
+	 <type>rotate</type>
+	 <object-name>switch_oh.050</object-name>
+	 <property>controls/lighting/nav-lights</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>-0.162</y-m>
+		 <z-m>0.188</z-m>
+   </center>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>switch_oh.050</object-name>
+	 <emission>
+		 <red>0.5</red>
+		 <green>0.3</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_oh.050</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/lighting/nav-lights</property>
+		 </binding>
+	 </action>
+</animation>
+
+<!-- anti collission lights-->
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch_oh.049</object-name>
+	<property>sim/multiplay/generic/int[0]</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>-30.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.007</x-m>
+		<y-m>-0.127</y-m>
+		<z-m>0.188</z-m>
+	</center>
+</animation>
+<animation>
+	<type>material</type>
+	<object-name>switch_oh.049</object-name>
+	<emission>
+		<red>0.5</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>switch_oh.049</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.5</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>sim/multiplay/generic/int[0]</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- instrument lights-->
+
+<animation>
+	<type>rotate</type>
+	<object-name>knob_oh.005</object-name>
+	<property>controls/lighting/instruments-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-90.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.007</x-m>
+		<y-m>-0.194</y-m>
+		<z-m>0.126</z-m>
+	</center>
+</animation>
+<animation>
+	<type>material</type>
+	<object-name>knob_oh.005</object-name>
+	<emission>
+		<red>0.5</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<animation>
+	<type>pick</type>
+	<object-name>knob_oh.005</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.5</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/lighting/instruments-norm</property>
+		</binding>
+	</action>
+</animation>
+
+
+<animation>
+	<type>material</type>
+	<object-name>switch_oh.001</object-name>
+	<object-name>switch_oh.002</object-name>
+	<object-name>switch_oh.003</object-name>
+	<object-name>switch_oh.004</object-name>
+	<object-name>switch_oh.005</object-name>
+	<object-name>switch_oh.006</object-name>
+	<object-name>switch_oh.007</object-name>
+	<object-name>switch_oh.033</object-name>
+	<object-name>oh_panel</object-name>
+	<emission>
+		<red>0.5</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+</PropertyList>

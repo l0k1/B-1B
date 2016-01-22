@@ -1,0 +1,165 @@
+<PropertyList>
+
+ <name>weapons</name>
+ <modal>false</modal>
+ <layout>vbox</layout>
+ 
+ <text>
+    <label>Fuel Management</label>
+ </text>
+  <text>
+    <label></label>
+  </text>
+  <group>
+   <layout>vbox</layout>
+   <text>
+    <label>Fuel loading only possible on the ground!</label>
+   </text>
+  <button>
+	<legend>Load 120000lbs fuel(60%)</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+	<binding>
+		<command>nasal</command>
+		<script>weapons.fuelload(65)</script>
+	</binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+    </button>
+    <button>
+	<legend>Load 190000lbs fuel(95%)</legend>
+	<default>true</default>
+	<pref-width>180</pref-width>
+	<binding>
+		<command>nasal</command>
+		<script>weapons.fuelload(100)</script>
+	</binding>
+	<binding>
+		<command>dialog-apply</command>
+	</binding>
+  </button>
+
+  </group>
+  <hrule/>
+
+  <text>
+    <label>Weapon Management</label>
+  </text>
+	  
+ <hrule/>
+ 
+  <!--<nasal>
+    <open>
+	#nasal
+    </open>
+  </nasal>-->
+
+
+    <text>
+    <label>Load Weapons</label>
+   </text>
+    <text>
+    <label></label>
+   </text>
+  <group>
+   <layout>vbox</layout>
+    
+    <text>
+    <label>Load bays with 8 guidable GBU-31 2000lb bombs</label>
+    <halign>left</halign>
+   </text>
+   
+  <button>
+	<legend>Load Guided Ordonance - FWD</legend>
+	<default>true</default>
+	<pref-width>230</pref-width>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.wpn_load(0)</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+  </button>
+  <button>
+	<legend>Load Guided Ordonance - INTMD</legend>
+	<default>true</default>
+	<pref-width>230</pref-width>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.wpn_load(1)</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+  </button>
+  <button>
+	<legend>Load Guided Ordonance - AFT</legend>
+	<default>true</default>
+	<pref-width>230</pref-width>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.wpn_load(2)</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+  </button>
+  </group>
+  
+  <button>
+	<legend>Enable/Disable MP-Messaging</legend>
+	<default>true</default>
+	<pref-width>230</pref-width>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.mp_messaged()</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+  </button>
+  
+  <button>
+	<legend>Enable/Disable Combat Damage</legend>
+	<default>true</default>
+	<pref-width>230</pref-width>
+	  <binding>
+		<command>nasal</command>
+		<script>weapons.mp_damage()</script>
+	  </binding>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+  </button>
+  
+  <hrule/>
+    
+    
+    <text>
+    <label>Target Coordinates</label>
+    </text>
+    <text>
+    <label></label>
+   </text>
+    <text>
+    <label>Type in Lat/Lon at OSO position/view via IKB and OSO MFD or</label>
+    </text>
+    <text>
+    <label>via Sniperpod: mouseclick + pressing t button (r next target))</label>
+   </text>
+    <text>
+    <label></label>
+    </text>
+    
+  <hrule/>
+  
+  <button>
+    <legend>Close</legend>
+    <binding>
+     <command>dialog-close</command>
+    </binding>
+   </button>
+
+</PropertyList>

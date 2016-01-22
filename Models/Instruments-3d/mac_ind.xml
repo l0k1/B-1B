@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>mac_ind.ac</path>
+ 
+
+ <!-- cg mac -->
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>macind1</object-name>
+	 <object-name>macind2</object-name>
+	 <property>instrumentation/cg/cg_mac</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>70.0</ind>
+			 <dep>0.111</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>0.0</y>
+		 <z>-1.0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>macind1</object-name>
+	 <object-name>macind2</object-name>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 </emission>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>macindset1</object-name>
+	<object-name>macindset2</object-name>
+	<property>instrumentation/cg/cg_mac_set</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>70.0</ind>
+			<dep>0.111</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>-1.0</z>
+	</axis>
+</animation>
+<animation>
+	<type>material</type>
+	<object-name>macind1</object-name>
+	<object-name>macind2</object-name>
+	<emission>
+		<red>0.8</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+ <!-- total gross weight -->
+<animation>
+	<type>textranslate</type>
+	<object-name>macfuel1.001</object-name>
+	<property>yasim/gross-weight-lbs</property>
+	<factor>0.000001</factor>
+	<step>100000</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>macfuel2.001</object-name>
+	 <property>yasim/gross-weight-lbs</property>
+	 <factor>0.00001</factor>
+	 <step>10000</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>macfuel3.001</object-name>
+	 <property>yasim/gross-weight-lbs</property>
+	 <factor>0.0001</factor>
+	 <step>1000</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>macfuel4.001</object-name>
+	 <property>yasim/gross-weight-lbs</property>
+	 <factor>0.001</factor>
+	 <step>100</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ <!-- total fuel display -->
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>macfuel1</object-name>
+	 <property>consumables/fuel/total-fuel-lbs</property>
+	 <factor>0.000001</factor>
+	 <step>100000</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>macfuel2</object-name>
+	 <property>consumables/fuel/total-fuel-lbs</property>
+	 <factor>0.00001</factor>
+	 <step>10000</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>macfuel3</object-name>
+	 <property>consumables/fuel/total-fuel-lbs</property>
+	 <factor>0.0001</factor>
+	 <step>1000</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>macfuel4</object-name>
+	 <property>consumables/fuel/total-fuel-lbs</property>
+	 <factor>0.001</factor>
+	 <step>100</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ 
+<animation>
+	<type>material</type>
+	<object-name>mac_face</object-name>
+	<object-name>macfuel1.001</object-name>
+	<object-name>macfuel2.001</object-name>
+	<object-name>macfuel3.001</object-name>
+	<object-name>macfuel4.001</object-name>
+	<object-name>macfuel1</object-name>
+	<object-name>macfuel2</object-name>
+	<object-name>macfuel3</object-name>
+	<object-name>macfuel4</object-name>
+	<emission>
+		<red>0.7</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+ 
+</PropertyList>
