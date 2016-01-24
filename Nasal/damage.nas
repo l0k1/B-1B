@@ -81,15 +81,12 @@ var incoming_listener = func {
 		if(rand() < probability) {
                   if(i < 4){
                     setprop("/controls/engines/engine["~i~"]/on-fire",1);
-                    screen.log.write("Engine "~i~" has caught fire!");
                     failed += 1;
                   } elsif(i == 5) {
                     setprop("/controls/APU/APUL-fire",1);
-                    screen.log.write("Left APU has caught fire!");
                     failed += 1;
                   } elsif(i == 6) {
                     setprop("/controls/APU/APUR-fire",1);
-                    screen.log.write("Right APU has caught fire!");
                     failed += 1;
                   }
                 }
