@@ -31,28 +31,28 @@ var incoming_listener = func {
 
               if (type == "aim-120" or type == "AIM120") {
                 # 44 lbs
-                maxDist = 20;
+                maxDist = 30;
               } elsif (type == "aim-7" or type == "RB-71") {
                 # 88 lbs
-                maxDist = 25;
+                maxDist = 38;
               } elsif (type == "aim-9" or type == "RB-24J") {
                 # 20.8 lbs
-                maxDist = 14;
+                maxDist = 21;
               } elsif (type == "R74") {
                 # 16 lbs
-                maxDist = 10;
+                maxDist = 15;
               } elsif (type == "MATRA-R530" or type == "Meteor") {
                 # 55 lbs
-                maxDist = 22;
+                maxDist = 33;
               } elsif (type == "AIM-54") {
                 # 135 lbs
-                maxDist = 30;
+                maxDist = 45;
               } elsif (type == "Matra R550 Magic 2") {
                 # 27 lbs
-                maxDist = 17;
+                maxDist = 25;
               } elsif (type == "Matra MICA") {
                 # 30 lbs
-                maxDist = 17.5;
+                maxDist = 26;
               } else {
                 return;
               }
@@ -73,11 +73,30 @@ var incoming_listener = func {
                 if(rand() < probability) {
                   FailureMgr.set_failure_level(failure_mode_id, 1);
                   failed += 1;
+                  print("rand: "~rand());
+                }
+              }
+              #seperate engine/apu damage code. this is specific to the b-1b.
+              for(var i = 0; i < 6; i = i + 1){
+		if(rand() < probability) {
+                  if(i < 4){
+                    setprop("/controls/engines/engine["~i~"]/on-fire",1);
+                    screen.log.write("Engine "~i~" has caught fire!");
+                    failed += 1;
+                  } elsif(i == 5) {
+                    setprop("/controls/APU/APUL-fire",1);
+                    screen.log.write("Left APU has caught fire!");
+                    failed += 1;
+                  } elsif(i == 6) {
+                    setprop("/controls/APU/APUR-fire",1);
+                    screen.log.write("Right APU has caught fire!");
+                    failed += 1;
+                  }
                 }
               }
               var percent = 100 * probability;
               print("Took "~percent~"% damage from "~type~" missile at "~distance~" meters distance! "~failed~" systems was hit.");
-              nearby_explosion();
+              #nearby_explosion();
             }
           } 
         } elsif (last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On ") {
@@ -93,12 +112,31 @@ var incoming_listener = func {
             var failed = 0;
             foreach(var failure_mode_id; mode_list) {
               if(rand() < probability) {
+		print("rand: "~rand());
                 FailureMgr.set_failure_level(failure_mode_id, 1);
                 failed += 1;
               }
             }
+            #seperate engine/apu damage code. this is specific to the b-1b.
+            for(var i = 0; i < 6; i = i + 1){
+              if(rand() < probability) {
+                if(i < 4){
+                  setprop("/controls/engines/engine["~i~"]/on-fire",1);
+                  screen.log.write("Engine "~i~" has caught fire!");
+                  failed += 1;
+                } elsif(i == 5) {
+                  setprop("/controls/APU/APUL-fire",1);
+                  screen.log.write("Left APU has caught fire!");
+                  failed += 1;
+                } elsif(i == 6) {
+                  setprop("/controls/APU/APUR-fire",1);
+                  screen.log.write("Right APU has caught fire!");
+                  failed += 1;
+                }
+              }
+            }
             print("Took 20% damage from cannon! "~failed~" systems was hit.");
-            nearby_explosion();
+            #nearby_explosion();
           }
         }
       }
