@@ -73,7 +73,6 @@ var incoming_listener = func {
                 if(rand() < probability) {
                   FailureMgr.set_failure_level(failure_mode_id, 1);
                   failed += 1;
-                  print("rand: "~rand());
                 }
               }
               #seperate engine/apu damage code. this is specific to the b-1b.
@@ -109,7 +108,6 @@ var incoming_listener = func {
             var failed = 0;
             foreach(var failure_mode_id; mode_list) {
               if(rand() < probability) {
-		print("rand: "~rand());
                 FailureMgr.set_failure_level(failure_mode_id, 1);
                 failed += 1;
               }
