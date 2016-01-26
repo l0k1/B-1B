@@ -9,7 +9,7 @@ var incoming_listener = func {
     if (size(last_vector) > 1 and author != callsign) {
       # not myself
       #print("not me");
-      if (1 == 1) { #  getprop("sim/ja37/armament/damage") == 1) {
+      if ( getprop("armament/damage") == 1) {
         # latest version of failure manager and taking damage enabled
         #print("damage enabled");
         var last1 = split(" ", last_vector[1]);
@@ -80,6 +80,7 @@ var incoming_listener = func {
 		if(rand() < probability) {
                   if(i < 4){
                     setprop("/controls/engines/engine["~i~"]/on-fire",1);
+		    setprop("/controls/engines/engine["~i~"]/cutoff","true");
                     failed += 1;
                   } elsif(i == 5) {
                     setprop("/controls/APU/APUL-fire",1);
@@ -117,6 +118,7 @@ var incoming_listener = func {
               if(rand() < probability) {
                 if(i < 4){
                   setprop("/controls/engines/engine["~i~"]/on-fire",1);
+		  setprop("/controls/engines/engine["~i~"]/cutoff","true");
                   screen.log.write("Engine "~i~" has caught fire!");
                   failed += 1;
                 } elsif(i == 5) {

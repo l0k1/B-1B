@@ -119,6 +119,9 @@ setprop("ai/guided/bay2/bomb[6]/target-distance",9999.99);
 setprop("ai/guided/bay2/bomb[7]/target-distance",9999.99);
 #init the wso
 setprop("instrumentation/wso_mfd/menu", 0);
+#damage
+setprop("/armament/damage",0);
+
 
 wingSweep(1);#sweep wings to fwd position
 wingSweep(1);
