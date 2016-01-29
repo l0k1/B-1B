@@ -95,7 +95,7 @@ setprop("armament/bay2/rack7",0);
 setprop("armament/bay2/rack7-armed",0);
 
 
-#init guidance info
+#init guidance info and wso panel.
 for (var bay_num = 0; bay_num < 3; bay_num = bay_num + 1) {
 	for (var bomb_num = 0; bomb_num < 8; bomb_num = bomb_num + 1) {
 		setprop("ai/guided/bay"~bay_num~"/bomb["~bomb_num~"]/target-distance",9999.99);
@@ -104,6 +104,7 @@ for (var bay_num = 0; bay_num < 3; bay_num = bay_num + 1) {
 		setprop("ai/guided/bay"~bay_num~"/bomb["~bomb_num~"]/target-latitude-deg",0);
 	}
 }
+weapons.wso_mfd_update(1,0);
 
 
 

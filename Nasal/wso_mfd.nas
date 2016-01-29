@@ -361,11 +361,6 @@ var wso_mfd_update = func(m,n){
   var cminu = 0;
   var bay = 0;
 #4-11, 12-19, 20-27
-  print("m: " ~ m);
-  print("n: " ~ n);
-  print("cmenu: " ~ cmenu);
-  print("cminu: " ~ cminu);
-  print("bay: " ~ bay);
   
   if(m == 1){
   
