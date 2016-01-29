@@ -35,7 +35,7 @@ var incoming_listener = func {
               } elsif (type == "aim-7" or type == "RB-71") {
                 # 88 lbs
                 maxDist = 38;
-              } elsif (type == "aim-9" or type == "RB-24J") {
+              } elsif (type == "aim-9" or type == "RB-24J" or type == "RB-74") {
                 # 20.8 lbs
                 maxDist = 21;
               } elsif (type == "R74") {
