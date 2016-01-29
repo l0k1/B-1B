@@ -362,23 +362,32 @@ var wso_mfd_update = func(m,n){
   var bay = 0;
 #4-11, 12-19, 20-27
   print("m: " ~ m);
+  print("n: " ~ n);
   print("cmenu: " ~ cmenu);
   print("cminu: " ~ cminu);
   print("bay: " ~ bay);
   
   if(m == 1){
-    #direct select submenu, if we are in topmenu
-    if((cmenu == 0) and (n < 3)){
-      #n = n;
+  
+    #select the very top menu.
+	if(n == 0){
+	  setprop("instrumentation/wso_mfd/menu", n);
+	  wso_mfd_draw();
+	  return;
+	}
+	
+    if((cmenu == 0) and (n < 4) ){
       setprop("instrumentation/wso_mfd/menu", n);
       wso_mfd_draw();
+	  return;
     }
 	
 	if((cmenu < 4) and (cmenu > 0)){
-		n = n * cmenu;
+		n = (n * cmenu) + 3;
+		setprop("instrumentation/wso_mfd/menu", n);
 		wso_mfd_draw();
 	}
-	
+
 	if((cmenu >= 4) and (cmenu <= 11)){
 		bay = 0;
 		cminu = cmenu - 4;

@@ -93,30 +93,21 @@ setprop("armament/bay2/rack6",0);
 setprop("armament/bay2/rack6-armed",0);
 setprop("armament/bay2/rack7",0);
 setprop("armament/bay2/rack7-armed",0);
-setprop("ai/guided/bay0/bomb[0]/target-distance",9999.99);
-setprop("ai/guided/bay0/bomb[1]/target-distance",9999.99);
-setprop("ai/guided/bay0/bomb[2]/target-distance",9999.99);
-setprop("ai/guided/bay0/bomb[3]/target-distance",9999.99);
-setprop("ai/guided/bay0/bomb[4]/target-distance",9999.99);
-setprop("ai/guided/bay0/bomb[5]/target-distance",9999.99);
-setprop("ai/guided/bay0/bomb[6]/target-distance",9999.99);
-setprop("ai/guided/bay0/bomb[7]/target-distance",9999.99);
-setprop("ai/guided/bay1/bomb[0]/target-distance",9999.99);
-setprop("ai/guided/bay1/bomb[1]/target-distance",9999.99);
-setprop("ai/guided/bay1/bomb[2]/target-distance",9999.99);
-setprop("ai/guided/bay1/bomb[3]/target-distance",9999.99);
-setprop("ai/guided/bay1/bomb[4]/target-distance",9999.99);
-setprop("ai/guided/bay1/bomb[5]/target-distance",9999.99);
-setprop("ai/guided/bay1/bomb[6]/target-distance",9999.99);
-setprop("ai/guided/bay1/bomb[7]/target-distance",9999.99);
-setprop("ai/guided/bay2/bomb[0]/target-distance",9999.99);
-setprop("ai/guided/bay2/bomb[1]/target-distance",9999.99);
-setprop("ai/guided/bay2/bomb[2]/target-distance",9999.99);
-setprop("ai/guided/bay2/bomb[3]/target-distance",9999.99);
-setprop("ai/guided/bay2/bomb[4]/target-distance",9999.99);
-setprop("ai/guided/bay2/bomb[5]/target-distance",9999.99);
-setprop("ai/guided/bay2/bomb[6]/target-distance",9999.99);
-setprop("ai/guided/bay2/bomb[7]/target-distance",9999.99);
+
+
+#init guidance info
+for (var bay_num = 0; bay_num < 3; bay_num = bay_num + 1) {
+	for (var bomb_num = 0; bomb_num < 8; bomb_num = bomb_num + 1) {
+		setprop("ai/guided/bay"~bay_num~"/bomb["~bomb_num~"]/target-distance",9999.99);
+		setprop("ai/guided/bay"~bay_num~"/bomb["~bomb_num~"]/target-distance-sec",9999.99);
+		setprop("ai/guided/bay"~bay_num~"/bomb["~bomb_num~"]/target-longitude-deg",0);
+		setprop("ai/guided/bay"~bay_num~"/bomb["~bomb_num~"]/target-latitude-deg",0);
+	}
+}
+
+
+
+
 #init the wso
 setprop("instrumentation/wso_mfd/menu", 0);
 #damage
