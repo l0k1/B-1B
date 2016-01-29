@@ -378,7 +378,7 @@ var wso_mfd_update = func(m,n){
     }
 	
 	if((cmenu < 4) and (cmenu > 0)){
-		n = (n * cmenu) + 3;
+		n = ((cmenu * 8) - 4) + (n - 1);
 		setprop("instrumentation/wso_mfd/menu", n);
 		wso_mfd_draw();
 	}
