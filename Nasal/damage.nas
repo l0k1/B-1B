@@ -77,20 +77,20 @@ var incoming_listener = func {
               }
               #seperate engine/apu damage code. this is specific to the b-1b.
               for(var i = 0; i < 6; i = i + 1){
-		if(rand() < probability) {
-                  if(i < 4){
-                    setprop("/controls/engines/engine["~i~"]/on-fire",1);
-		    setprop("/controls/engines/engine["~i~"]/cutoff","true");
-                    failed += 1;
-                  } elsif(i == 5) {
-                    setprop("/controls/APU/APUL-fire",1);
-                    failed += 1;
-                  } elsif(i == 6) {
-                    setprop("/controls/APU/APUR-fire",1);
-                    failed += 1;
-                  }
-                }
-              }
+				if(rand() < probability * 2) {
+						  if(i < 4){
+							setprop("/controls/engines/engine["~i~"]/on-fire",1);
+					setprop("/controls/engines/engine["~i~"]/cutoff","true");
+							failed += 1;
+						  } elsif(i == 5) {
+							setprop("/controls/APU/APUL-fire",1);
+							failed += 1;
+						  } elsif(i == 6) {
+							setprop("/controls/APU/APUR-fire",1);
+							failed += 1;
+						  }
+						}
+					  }
               var percent = 100 * probability;
               print("Took "~percent~"% damage from "~type~" missile at "~distance~" meters distance! "~failed~" systems was hit.");
               #nearby_explosion();
@@ -115,7 +115,7 @@ var incoming_listener = func {
             }
             #seperate engine/apu damage code. this is specific to the b-1b.
             for(var i = 0; i < 6; i = i + 1){
-              if(rand() < probability) {
+              if(rand() < probability * 2) {
                 if(i < 4){
                   setprop("/controls/engines/engine["~i~"]/on-fire",1);
 		  setprop("/controls/engines/engine["~i~"]/cutoff","true");

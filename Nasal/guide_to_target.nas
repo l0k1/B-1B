@@ -136,11 +136,11 @@ var mat_name = geo_info[1]["names"][0];
 if (mat_name == nil) {
 var mat_name = nil;
 }
-setprop("ai/models/guided[" ~ p ~ "]/material/name", mat_name);
+setprop("ai/models/bay" ~ b ~ "/guided[" ~ p ~ "]/material/name", mat_name);
 var galt_m = geo_info[0];
-setprop("ai/models/guided[" ~ p ~ "]/impact/elevation-m", galt_m);
+setprop("ai/models/bay" ~ b ~ "/guided[" ~ p ~ "]/impact/elevation-m", galt_m);
 var solid = geo_info[1]["solid"];
-setprop("ai/models/guided[" ~ p ~ "]/material/solid", solid);
+setprop("ai/models/bay" ~ b ~ "/guided[" ~ p ~ "]/material/solid", solid);
 #debug.dump(mat_name);
 #print (solid);
 
@@ -151,6 +151,7 @@ setprop("ai/models/bay"~ b ~"/guided[" ~ p ~ "]/impact/type", 'terrain');
 #setprop("ai/models/bay"~ b ~"/guided[" ~ p ~ "]/impact/pitch-deg", 0);
 #setprop("ai/models/bay"~ b ~"/guided[" ~ p ~ "]/impact/roll-deg", 0);
 #setprop("ai/models/bay"~ b ~"/guided[" ~ p ~ "]/impact/speed-mps", 0);
+print('/ai/models/bay'""~ b ~""'/guided['"" ~ p ~ ""']');
 setprop("ai/models/model-impact", '/ai/models/bay'""~ b ~""'/guided['"" ~ p ~ ""']');
 var p_string = p + 1;
 var b_string = "";
@@ -185,8 +186,8 @@ setlistener("ai/models/model-impact", func(n) {
     if (solid){
       var long = getprop(impact ~ "/impact/longitude-deg");
       var lat = getprop(impact ~ "/impact/latitude-deg");
-
       geo.put_model("Aircraft/B-1B/Models/crater.ac",lat, long);
+	  geo.put_model("Aircraft/B-1B/Models/smoke.xml",lat, long);
     }
 });
 
