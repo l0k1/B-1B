@@ -29,7 +29,7 @@ var incoming_listener = func {
             if(distance != nil) {
               var maxDist = 0;
 
-              if (type == "aim-120" or type == "AIM120") {
+              if (type == "aim-120" or type == "AIM120" or type = "RB-99") {
                 # 44 lbs
                 maxDist = 30;
               } elsif (type == "aim-7" or type == "RB-71") {
