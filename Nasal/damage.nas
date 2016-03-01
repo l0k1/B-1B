@@ -1,3 +1,25 @@
+var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
+
+var TRUE  = 1;
+var FALSE = 0;
+
+var warhead_lbs = {
+    "aim-120":              44.0,
+    "AIM120":               44.0,
+    "RB-99":                44.0,
+    "aim-7":                88.0,
+    "RB-71":                88.0,
+    "aim-9":                20.8,
+    "RB-24J":               20.8,
+    "RB-74":                20.8,
+    "R74":                  16.0,
+    "MATRA-R530":           55.0,
+    "Meteor":               55.0,
+    "AIM-54":               135.0,
+    "Matra R550 Magic 2":   27.0,
+    "Matra MICA":           30.0,
+};
+
 var incoming_listener = func {
   var history = getprop("/sim/multiplay/chat-history");
   var hist_vector = split("\n", history);
@@ -9,7 +31,67 @@ var incoming_listener = func {
     if (size(last_vector) > 1 and author != callsign) {
       # not myself
       #print("not me");
-      if ( getprop("armament/damage") == 1) {
+      var m2000 = FALSE;
+      if (find(" at " ~ callsign ~ ". Release ", last_vector[1]) != -1) {
+        # a m2000 is firing at us
+        m2000 = TRUE;
+      }
+      if (last_vector[1] == " FOX2 at" or last_vector[1] == " aim7 at" or last_vector[1] == " aim9 at" or last_vector[1] == " aim120 at" or last_vector[1] == " RB-24J fired at" or last_vector[1] == " RB-74 fired at" or last_vector[1] == " RB-71 fired at" or last_vector[1] == " RB-99 fired at" or m2000 == TRUE) {
+        # air2air being fired
+        if (size(last_vector) > 2 or m2000 == TRUE) {
+          #print("Missile launch detected at"~last_vector[2]~" from "~author);
+          if (m2000 == TRUE or last_vector[2] == " "~callsign) {
+            # its being fired at me
+            #print("Incoming!");
+            var enemy = getCallsign(author);
+            if (enemy != nil) {
+              #print("enemy identified");
+              var bearingNode = enemy.getNode("radar/bearing-deg");
+              if (bearingNode != nil) {
+                #print("bearing to enemy found");
+                var bearing = bearingNode.getValue();
+                var heading = getprop("orientation/heading-deg");
+                var clock = bearing - heading;
+                while(clock < 0) {
+                  clock = clock + 360;
+                }
+                while(clock > 360) {
+                  clock = clock - 360;
+                }
+                #print("incoming from "~clock);
+                if (clock >= 345 or clock < 15) {
+                  playIncomingSound("12");
+                } elsif (clock >= 15 and clock < 45) {
+                  playIncomingSound("1");
+                } elsif (clock >= 45 and clock < 75) {
+                  playIncomingSound("2");
+                } elsif (clock >= 75 and clock < 105) {
+                  playIncomingSound("3");
+                } elsif (clock >= 105 and clock < 135) {
+                  playIncomingSound("4");
+                } elsif (clock >= 135 and clock < 165) {
+                  playIncomingSound("5");
+                } elsif (clock >= 165 and clock < 195) {
+                  playIncomingSound("6");
+                } elsif (clock >= 195 and clock < 225) {
+                  playIncomingSound("7");
+                } elsif (clock >= 225 and clock < 255) {
+                  playIncomingSound("8");
+                } elsif (clock >= 255 and clock < 285) {
+                  playIncomingSound("9");
+                } elsif (clock >= 285 and clock < 315) {
+                  playIncomingSound("10");
+                } elsif (clock >= 315 and clock < 345) {
+                  playIncomingSound("11");
+                } else {
+                  playIncomingSound("");
+                }
+                return;
+              }
+            }
+          }
+        }
+      } elsif ( getprop("armament/damage") == 1) {
         # latest version of failure manager and taking damage enabled
         #print("damage enabled");
         var last1 = split(" ", last_vector[1]);
@@ -29,74 +111,27 @@ var incoming_listener = func {
             if(distance != nil) {
               var maxDist = 0;
 
-              if (type == "aim-120" or type == "AIM120" or type = "RB-99") {
-                # 44 lbs
-                maxDist = 30;
-              } elsif (type == "aim-7" or type == "RB-71") {
-                # 88 lbs
-                maxDist = 38;
-              } elsif (type == "aim-9" or type == "RB-24J" or type == "RB-74") {
-                # 20.8 lbs
-                maxDist = 21;
-              } elsif (type == "R74") {
-                # 16 lbs
-                maxDist = 15;
-              } elsif (type == "MATRA-R530" or type == "Meteor") {
-                # 55 lbs
-                maxDist = 33;
-              } elsif (type == "AIM-54") {
-                # 135 lbs
-                maxDist = 45;
-              } elsif (type == "Matra R550 Magic 2") {
-                # 27 lbs
-                maxDist = 25;
-              } elsif (type == "Matra MICA") {
-                # 30 lbs
-                maxDist = 26;
+              if (contains(warhead_lbs, type)) {
+                maxDist = maxDamageDistFromWarhead(warhead_lbs[type]);
               } else {
                 return;
               }
-              #print("maxDist="~maxDist);
+
               var diff = maxDist-distance;
-              if (diff > 0) {
-                diff = diff * diff;
-              } else {
-                diff = diff * diff;
-                diff = diff * -1;
+              if (diff < 0) {
+                diff = 0;
               }
+              
+              diff = diff * diff;
+              
               var probability = diff / (maxDist*maxDist);
 
-              var failure_modes = FailureMgr._failmgr.failure_modes;
-              var mode_list = keys(failure_modes);
-              var failed = 0;
-              foreach(var failure_mode_id; mode_list) {
-                if(rand() < probability) {
-                  FailureMgr.set_failure_level(failure_mode_id, 1);
-                  failed += 1;
-                }
-              }
-              #seperate engine/apu damage code. this is specific to the b-1b.
-              for(var i = 0; i < 6; i = i + 1){
-				if(rand() < probability * 2) {
-						  if(i < 4){
-							setprop("/controls/engines/engine["~i~"]/on-fire",1);
-					setprop("/controls/engines/engine["~i~"]/cutoff","true");
-							failed += 1;
-						  } elsif(i == 5) {
-							setprop("/controls/APU/APUL-fire",1);
-							failed += 1;
-						  } elsif(i == 6) {
-							setprop("/controls/APU/APUR-fire",1);
-							failed += 1;
-						  }
-						}
-					  }
+              var failed = fail_systems(probability);
               var percent = 100 * probability;
               print("Took "~percent~"% damage from "~type~" missile at "~distance~" meters distance! "~failed~" systems was hit.");
-              #nearby_explosion();
             }
           } 
-        } elsif (last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On ") {
+        } elsif (last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " M61A1 shell hit") {
           # cannon hitting someone
           #print("cannon");
           if (size(last_vector) > 2 and last_vector[2] == " "~callsign) {
@@ -104,36 +139,11 @@ var incoming_listener = func {
             #print("hitting me");
 
             var probability = 0.20; # take 20% damage from each hit
-            var failure_modes = FailureMgr._failmgr.failure_modes;
-            var mode_list = keys(failure_modes);
-            var failed = 0;
-            foreach(var failure_mode_id; mode_list) {
-              if(rand() < probability) {
-                FailureMgr.set_failure_level(failure_mode_id, 1);
-                failed += 1;
-              }
+            if (last_vector[1] == " Gun Splash On ") {
+              probability = 0.17;
             }
-            #seperate engine/apu damage code. this is specific to the b-1b.
-            for(var i = 0; i < 6; i = i + 1){
-              if(rand() < probability * 2) {
-                if(i < 4){
-                  setprop("/controls/engines/engine["~i~"]/on-fire",1);
-		  setprop("/controls/engines/engine["~i~"]/cutoff","true");
-                  screen.log.write("Engine "~i~" has caught fire!");
-                  failed += 1;
-                } elsif(i == 5) {
-                  setprop("/controls/APU/APUL-fire",1);
-                  screen.log.write("Left APU has caught fire!");
-                  failed += 1;
-                } elsif(i == 6) {
-                  setprop("/controls/APU/APUR-fire",1);
-                  screen.log.write("Right APU has caught fire!");
-                  failed += 1;
-                }
-              }
-            }
-            print("Took 20% damage from cannon! "~failed~" systems was hit.");
-            #nearby_explosion();
+            var failed = fail_systems(probability);
+            print("Took "~probability*100~"% damage from cannon! "~failed~" systems was hit.");
           }
         }
       }
@@ -141,4 +151,70 @@ var incoming_listener = func {
   }
 }
 
+var maxDamageDistFromWarhead = func (lbs) {
+  # very simple
+  var dist = 5.5*math.sqrt(lbs);
+
+  return dist;
+}
+
+var fail_systems = func (probability) {
+    var failure_modes = FailureMgr._failmgr.failure_modes;
+    var mode_list = keys(failure_modes);
+    var failed = 0;
+    foreach(var failure_mode_id; mode_list) {
+        if (rand() < probability) {
+            FailureMgr.set_failure_level(failure_mode_id, 1);
+            failed += 1;
+        }
+    }
+	for(var i = 0; i < 6; i = i + 1){
+		if(rand() < probability * 2) {
+			if(i < 4){
+				setprop("/controls/engines/engine["~i~"]/on-fire",1);
+				setprop("/controls/engines/engine["~i~"]/cutoff","true");
+				failed += 1;
+			} elsif(i == 5) {
+				setprop("/controls/APU/APUL-fire",1);
+				failed += 1;
+			} elsif(i == 6) {
+				setprop("/controls/APU/APUR-fire",1);
+				failed += 1;
+			}
+		}
+	}
+    return failed;
+};
+
+var playIncomingSound = func (clock) {
+  setprop("sound/incoming"~clock, 1);
+  settimer(func {stopIncomingSound(clock);},3);
+}
+
+var stopIncomingSound = func (clock) {
+  setprop("sound/incoming"~clock, 0);
+}
+
+var callsign_struct = {};
+var getCallsign = func (callsign) {
+  var node = callsign_struct[callsign];
+  return node;
+}
+
+var processCallsigns = func () {
+  callsign_struct = {};
+  var players = props.globals.getNode("ai/models").getChildren();
+  foreach (var player; players) {
+    if(player.getChild("valid") != nil and player.getChild("valid").getValue() == TRUE and player.getChild("callsign") != nil and player.getChild("callsign").getValue() != "" and player.getChild("callsign").getValue() != nil) {
+      var callsign = player.getChild("callsign").getValue();
+      callsign_struct[callsign] = player;
+    }
+  }
+  settimer(processCallsigns, 1.5);
+}
+
+processCallsigns();
+
 setlistener("/sim/multiplay/chat-history", incoming_listener, 0, 0);
+
+
