@@ -186,6 +186,7 @@ setlistener("ai/models/model-impact", func(n) {
     if (solid){
       var long = getprop(impact ~ "/impact/longitude-deg");
       var lat = getprop(impact ~ "/impact/latitude-deg");
+	  props.globals.getNode("sim/multiplay/generic/string[0]").setValue(lat ~ "|" ~ long);
       geo.put_model("Aircraft/B-1B/Models/crater.ac",lat, long);
 	  geo.put_model("Aircraft/B-1B/Models/smoke.xml",lat, long);
     }
