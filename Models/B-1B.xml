@@ -23,6 +23,7 @@ more to come :-)
 			
 			var load_bomb_exploded_models = func () {
 				print("listener triggered");
+				var history = getprop("/sim/multiplay/chat-history");
 				var hist_vector = split("\n", history);
 				if (size(hist_vector) > 0) {
 					var last = hist_vector[size(hist_vector)-1];
