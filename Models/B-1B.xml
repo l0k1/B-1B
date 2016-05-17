@@ -15,6 +15,8 @@ more to come :-)
 			#loads the crater and smoke models over mp.
 			
 			print("~~~B-1B Crater Over Multiplayer is loaded~~~");
+			print("!!!B-1B's can create craters on airports!!!!");
+			print("***Use the MP Pilot List to "ignore" trolls to prevent this from happening!***");
 		
 			var listener_prop = "/sim/multiplay/b-1b/listener-set";
 			var history_prop = "/sim/multiplay/chat-history";
@@ -22,7 +24,6 @@ more to come :-)
 			props.globals.initNode(listener_prop,0);
 			
 			var load_bomb_exploded_models = func () {
-				print("listener triggered");
 				var history = getprop("/sim/multiplay/chat-history");
 				var hist_vector = split("\n", history);
 				if (size(hist_vector) > 0) {
@@ -32,10 +33,8 @@ more to come :-)
 					var callsign = getprop("sim/multiplay/callsign");
 					if (size(last_vector) > 2 and author != callsign) {
 						if ( last_vector[2] == " GBU-31 positive impact" ) {
-							print("impact detected");
 							foreach(var mp; props.globals.getNode("/ai/models").getChildren("multiplayer")) {
 								if ( mp.getNode("callsign").getValue() == author and mp.getNode("sim/multiplay/generic/string[0]") != "" ) {
-									print("bomber found");
 									var boom_coords = split("|",mp.getNode("sim/multiplay/generic/string[0]").getValue());
 									geo.put_model("Aircraft/B-1B/Models/crater.ac",boom_coords[0], boom_coords[1]);
 									geo.put_model("Aircraft/B-1B/Models/smoke.xml",boom_coords[0], boom_coords[1]);
