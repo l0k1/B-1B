@@ -48,7 +48,7 @@ more to come :-)
 			}
 			
 			if ( props.globals.getNode(listener_prop).getValue() == 0 ) {
-				setlistener(history_prop, func { load_bomb_exploded_models } );
+				setlistener(history_prop, func { load_bomb_exploded_models(); } );
 				props.globals.getNode(listener_prop).setValue(1);
 			}				
 			
