@@ -20,6 +20,10 @@ maggse
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
 			      <script>weapons.wso_mfd_draw()</script>
 		 </binding>
 
@@ -35,6 +39,10 @@ maggse
 		 <binding>
 			      <command>nasal</command>
 			      <script>weapons.change_ikb_number(2)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
@@ -56,6 +64,10 @@ maggse
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
 			      <script>weapons.wso_mfd_draw()</script>
 		 </binding>
 
@@ -71,6 +83,10 @@ maggse
 		 <binding>
 			      <command>nasal</command>
 			      <script>weapons.change_ikb_number(4)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
@@ -92,6 +108,10 @@ maggse
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
 			      <script>weapons.wso_mfd_draw()</script>
 		 </binding>
 
@@ -107,6 +127,10 @@ maggse
 		 <binding>
 			      <command>nasal</command>
 			      <script>weapons.change_ikb_number(6)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
@@ -128,6 +152,10 @@ maggse
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
 			      <script>weapons.wso_mfd_draw()</script>
 		 </binding>
 
@@ -143,6 +171,10 @@ maggse
 		 <binding>
 			      <command>nasal</command>
 			      <script>weapons.change_ikb_number(8)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
@@ -164,6 +196,10 @@ maggse
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
 			      <script>weapons.wso_mfd_draw()</script>
 		 </binding>
 
@@ -179,6 +215,10 @@ maggse
 		 <binding>
 			      <command>nasal</command>
 			      <script>weapons.change_ikb_number(0)</script>
+		 </binding>
+		 <binding>
+			      <command>nasal</command>
+			      <script>weapons.change_coord_pos(1)</script>
 		 </binding>
 		 <binding>
 			      <command>nasal</command>
