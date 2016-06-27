@@ -418,7 +418,7 @@ var wso_mfd_update = func(m,n){
         if ((talt_m == nil) or (talt_m == "")) {
           weapons.wpn_info[bay][cminu].talt_m = -11;
         } else {
-            wpn_info[bay][cminu].talt_m = talt_m;
+            weapons.wpn_info[bay][cminu].talt_m = talt_m;
           }
         wso_mfd_draw();
       }

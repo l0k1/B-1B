@@ -271,6 +271,13 @@ B-1B set file.
 			<script>weapons.repair_damage()</script>
 		  </binding>
 		</item>
+		<item n="4">
+		  <label>Targetting Computer</label>
+		  <binding>
+		    <command>nasal</command>
+			<script>weapons.targetting_comp.open()</script>
+	      </binding>
+		</item>
 		<item n="10">
                   <label>Pushback</label>
                   <name>pushback</name>
