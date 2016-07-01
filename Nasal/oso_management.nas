@@ -196,6 +196,9 @@ if (on){
       }
     } else {
         rot_launch_seq[i] = 0;
+		if ( getprop("ai/guided/bay"~ n ~"/bomb["~ i ~"]/target-in_range") ==  1 ) {
+			setprop("ai/guided/bay"~ n ~"/bomb["~ i ~"]/target-in_range", 0);
+		}
         #print("target_out_of_range");
       }
 

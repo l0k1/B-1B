@@ -162,11 +162,35 @@ if (b == 0) {
 } elsif (b == 2) {
 	b_string = "AFT Bay";
 }
-if ( getprop("armament/mp-messaging") == 0 ) {
-	screen.log.write(b_string ~ " - Rack "~p_string~": GBU-31 positive impact");
-} else {
-	setprop("/sim/multiplay/chat",b_string ~ " - Rack "~p_string~": GBU-31 positive impact");
+var impactPos = geo.Coord.new().set_latlon(getprop("ai/models/bay"~ b ~"/guided[" ~ p ~ "]/impact/latitude-deg"),getprop("ai/models/bay"~ b ~"/guided[" ~ p ~ "]/impact/longitude-deg"),getprop("ai/models/bay"~ b ~"/guided[" ~ p ~ "]/impact/elevation-m"));
+var mp_found = 0;
+foreach(var mp; props.globals.getNode("/ai/models").getChildren("multiplayer")){
+	#print("Gau impact - hit: " ~ typeNode.getValue());
+	var mlat = mp.getNode("position/latitude-deg").getValue();
+	var mlon = mp.getNode("position/longitude-deg").getValue();
+	var malt = mp.getNode("position/altitude-ft").getValue() * FT2M;
+	var selectionPos = geo.Coord.new().set_latlon(mlat, mlon, malt);
+	var distance = impactPos.distance_to(selectionPos);
+	
+	if (distance < 100) {
+		typeOrd = "GBU-31";
+		mp_found = 1;
+		if ( getprop("armament/mp-messaging") == 0 ) {
+			screen.log.write(typeOrd ~ " hit: " ~  mp.getNode("callsign").getValue());
+		} else {
+			defeatSpamFilter(sprintf( typeOrd~" exploded: %01.1f", distance) ~ " meters from: " ~ mp.getNode("callsign").getValue());
+		}
+	}
 }
+
+if ( mp_found == 0 ) {
+	if ( getprop("armament/mp-messaging") == 0 ) {
+		screen.log.write(b_string ~ " - Rack "~p_string~": GBU-31 positive impact");
+	} else {
+		setprop("/sim/multiplay/chat",b_string ~ " - Rack "~p_string~": GBU-31 positive impact");
+	}
+}
+
 
 # place impact crater model
 
@@ -194,3 +218,25 @@ setlistener("ai/models/model-impact", func(n) {
 
 #removing
 #props.globals.getNode("/models", 1).removeChild("model", 0);
+
+############ MISC
+var spams = 0;
+
+var defeatSpamFilter = func (str) {
+  spams += 1;
+  if (spams == 15) {
+    spams = 1;
+  }
+  str = str~":";
+  for (var i = 1; i <= spams; i+=1) {
+    str = str~".";
+  }
+  
+  if (getprop("armament/mp-messaging")) {
+	setprop("/sim/multiplay/chat", str);
+  } else {
+	setprop("/sim/messages/atc", str);
+  }
+  
+  return str;
+}
