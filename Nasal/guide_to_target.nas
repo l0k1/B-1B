@@ -221,6 +221,7 @@ setlistener("ai/models/model-impact", func(n) {
 
 ############ MISC
 var spams = 0;
+var spamList = [];
 
 var defeatSpamFilter = func (str) {
   spams += 1;
@@ -231,12 +232,19 @@ var defeatSpamFilter = func (str) {
   for (var i = 1; i <= spams; i+=1) {
     str = str~".";
   }
-  
-  if (getprop("armament/mp-messaging")) {
-	setprop("/sim/multiplay/chat", str);
-  } else {
-	setprop("/sim/messages/atc", str);
+  var newList = [str];
+  for (var i = 0; i < size(spamList); i += 1) {
+    append(newList, spamList[i]);
   }
-  
-  return str;
+  spamList = newList;  
 }
+
+var spamLoop = func {
+  var spam = pop(spamList);
+  if (spam != nil) {
+    setprop("/sim/multiplay/chat", spam);
+  }
+  settimer(spamLoop, 1.20);
+}
+
+spamLoop();

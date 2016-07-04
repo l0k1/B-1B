@@ -34,6 +34,8 @@ var warhead_lbs = {
     "M71":                 200.00,
     "MK-82":               192.00,
     "LAU-68":               10.00,
+    "M317":                145.00,
+    "GBU-31":              945.00,
 };
 
 var incoming_listener = func {
