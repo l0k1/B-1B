@@ -32,7 +32,7 @@ more to come :-)
 					var author = last_vector[0];
 					var callsign = getprop("sim/multiplay/callsign");
 					if (size(last_vector) > 2 and author != callsign) {
-						if ( last_vector[2] == " GBU-31 positive impact" ) {
+						if ( last_vector[2] == " GBU-31 positive impact" or " GBU-31 exploded") {
 							foreach(var mp; props.globals.getNode("/ai/models").getChildren("multiplayer")) {
 								if ( mp.getNode("callsign").getValue() == author and mp.getNode("sim/multiplay/generic/string[0]") != "" ) {
 									var boom_coords = split("|",mp.getNode("sim/multiplay/generic/string[0]").getValue());
