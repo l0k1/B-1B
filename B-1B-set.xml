@@ -16,7 +16,7 @@ B-1B set file.
 
     <flight-model>yasim</flight-model>
     <status>alpha</status>
-    <author>Markus Zojer, Paul Jay Schrenker</author>
+    <author>Markus Zojer, Paul Jay Schrenker, pinto</author>
     <aero>B-1B-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
 
