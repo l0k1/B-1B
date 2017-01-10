@@ -1,7 +1,16 @@
+#
+# Install: Include this code into an aircraft to make it damagable. (remember to add it to the -set file)
+#
+# Author: Nikolai V. Chr. (with some improvement by Onox and Pinto)
+#
+#
+
+
 var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
 
 var TRUE  = 1;
 var FALSE = 0;
+
 
 var cannon_types = {
     " M70 rocket hit":        0.30,
@@ -15,8 +24,7 @@ var cannon_types = {
     " 7.62 hit":              2.50, #UH-1
     " 50 BMG hit":            3.00, #p-47
 };
-    
-    
+
     
 var warhead_lbs = {
     "aim-120":              44.00,
@@ -78,7 +86,11 @@ var incoming_listener = func {
         # a m2000 is firing at us
         m2000 = TRUE;
       }
-      if (last_vector[1] == " FOX2 at" or last_vector[1] == " aim7 at" or last_vector[1] == " aim9 at" or last_vector[1] == " aim120 at" or last_vector[1] == " RB-24J fired at" or last_vector[1] == " RB-74 fired at" or last_vector[1] == " RB-71 fired at" or last_vector[1] == " RB-99 fired at" or m2000 == TRUE) {
+      if (last_vector[1] == " FOX2 at" or last_vector[1] == " Fox 1 at" or last_vector[1] == " Fox 2 at" or last_vector[1] == " Fox 3 at"
+          or last_vector[1] == " Greyhound at" or last_vector[1] == " Bombs away at" or last_vector[1] == " Bruiser at" or last_vector[1] == " Rifle at" or last_vector[1] == " Bird away at"
+          or last_vector[1] == " aim7 at" or last_vector[1] == " aim9 at"
+          or last_vector[1] == " aim120 at"
+          or m2000 == TRUE) {
         # air2air being fired
         if (size(last_vector) > 2 or m2000 == TRUE) {
           #print("Missile launch detected at"~last_vector[2]~" from "~author);
@@ -133,7 +145,7 @@ var incoming_listener = func {
             }
           }
         }
-      } elsif ( getprop("armament/damage") == 1) {
+      } elsif ( getprop("armament/damage") == 1) { # mirage: getprop("/controls/armament/mp-messaging")
         # latest version of failure manager and taking damage enabled
         #print("damage enabled");
         var last1 = split(" ", last_vector[1]);
@@ -142,7 +154,7 @@ var incoming_listener = func {
           if (size(last_vector) > 3 and last_vector[3] == " "~callsign) {
             #print("that someone is me!");
             var type = last1[1];
-            if (type == "Matra") {
+            if (type == "Matra" or type == "Sea") {
               for (var i = 2; i < size(last1)-1; i += 1) {
                 type = type~" "~last1[i];
               }
@@ -151,6 +163,18 @@ var incoming_listener = func {
             var distance = num(number[1]);
             #print(type~"|");
             if(distance != nil) {
+              var dist = distance;
+
+              if (type == "M90") {
+                var prob = rand()*0.5;
+                var failed = fail_systems(prob);
+                var percent = 100 * prob;
+                printf("Took %.1f%% damage from %s clusterbombs at %0.1f meters. %s systems was hit", percent,type,dist,failed);
+                nearby_explosion();
+                return;
+              }
+
+              distance = clamp(distance-3, 0, 1000000);
               var maxDist = 0;
 
               if (contains(warhead_lbs, type)) {
@@ -170,7 +194,8 @@ var incoming_listener = func {
 
               var failed = fail_systems(probability);
               var percent = 100 * probability;
-              print("Took "~percent~"% damage from "~type~" missile at "~distance~" meters distance! "~failed~" systems was hit.");
+              printf("Took %.1f%% damage from %s missile at %0.1f meters. %s systems was hit", percent,type,dist,failed);
+              nearby_explosion();
             }
           } 
         } elsif (cannon_types[last_vector[1]] != nil) {
