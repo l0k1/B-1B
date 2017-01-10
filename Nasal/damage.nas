@@ -3,6 +3,21 @@ var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
 var TRUE  = 1;
 var FALSE = 0;
 
+var cannon_types = {
+    " M70 rocket hit":        0.30,
+    " M55 cannon shell hit":  0.20,
+    " KCA cannon shell hit":  0.20,
+    " Gun Splash On ":        0.30,
+    " M61A1 shell hit":       0.20,
+    " GAU-8/A hit":           0.30,
+    " BK27 cannon hit":       0.20,
+    " GSh-30 hit":            0.20,
+    " 7.62 hit":              2.50, #UH-1
+    " 50 BMG hit":            3.00, #p-47
+};
+    
+    
+    
 var warhead_lbs = {
     "aim-120":              44.00,
     "AIM120":               44.00,
@@ -10,6 +25,7 @@ var warhead_lbs = {
     "aim-7":                88.00,
     "RB-71":                88.00,
     "aim-9":                20.80,
+    "AIM9":                 20.80,
     "AIM-9":                20.80,
     "RB-24":                20.80,
     "RB-24J":               20.80,
@@ -36,6 +52,14 @@ var warhead_lbs = {
     "LAU-68":               10.00,
     "M317":                145.00,
     "GBU-31":              945.00,
+    "AIM132":               22.05,
+    "ALARM":               450.00,
+    "STORMSHADOW":         850.00,
+    "R-60":                  6.60,
+    "R-27R1":               85.98,
+    "R-27T1":               85.98,
+    "FAB-500":             564.00,
+    "M71R":                200.00,
 };
 
 var incoming_listener = func {
@@ -149,19 +173,19 @@ var incoming_listener = func {
               print("Took "~percent~"% damage from "~type~" missile at "~distance~" meters distance! "~failed~" systems was hit.");
             }
           } 
-        } elsif (last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " M61A1 shell hit" or last_vector[1] == " GAU-8/A hit") {
+        } elsif (cannon_types[last_vector[1]] != nil) {
           # cannon hitting someone
           #print("cannon");
           if (size(last_vector) > 2 and last_vector[2] == " "~callsign) {
             # that someone is me!
             #print("hitting me");
 
-            var probability = 0.13; # take 20% damage from each hit
-            if (last_vector[1] == " M70 rocket hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " GAU-8/A hit") {
-              probability = 0.17;
-            }
+            var probability = cannon_types[last_vector[1]];
+            #print("probability: " ~ probability);
+            
             var failed = fail_systems(probability);
-            print("Took "~probability*100~"% damage from cannon! "~failed~" systems was hit.");
+            printf("Took %.1f%% damage from cannon! %s systems was hit.", probability*100, failed);
+            nearby_explosion();
           }
         }
       }
